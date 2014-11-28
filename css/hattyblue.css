@@ -1,9 +1,32 @@
 body {
   margin: 0;
   padding: 0;
-  background: #9babaf; }
+  background: #9babaf;
+  font-family: 'blenda_scriptregular'; }
+
+@font-face {
+  font-family: 'blenda_scriptregular';
+  src: url("fonts/blenda_script-webfont.eot");
+  src: url("fonts/blenda_script-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/blenda_script-webfont.woff2") format("woff2"), url("fonts/blenda_script-webfont.woff") format("woff"), url("fonts/blenda_script-webfont.ttf") format("truetype"), url("fonts/blenda_script-webfont.svg#blenda_scriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0; }
 
 .page {
   width: 768px;
   margin: 0 auto;
   background: #ffffff; }
+  .page .header {
+    text-align: center;
+    padding-top: 40px;
+    background: #ec008c; }
+    .page .header h1 {
+      margin: 0;
+      padding: 0; }
+      .page .header h1 a {
+        display: block; }
+    .page .header p {
+      color: #ffffff; }

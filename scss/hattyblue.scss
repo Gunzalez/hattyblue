@@ -2,10 +2,39 @@ body {
     margin: 0;
     padding: 0;
     background: #9babaf;
+    font-family: 'blenda_scriptregular';
+}
+
+@import "fonts";
+
+// resets
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
 }
 
 .page {
     width: 768px;
     margin: 0 auto;
     background: #ffffff;
+
+    .header {
+        text-align: center;
+        padding-top: 40px;
+        background: #ec008c;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+
+            a {
+                display: block;
+            }
+
+        }
+
+        p {
+            color: #ffffff;
+        }
+    }
 }
