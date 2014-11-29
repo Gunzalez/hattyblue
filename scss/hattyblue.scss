@@ -40,6 +40,12 @@ $borderColor: #e5e5e5;
 .cleft { clear: left; }
 .cboth { clear: both; }
 
+.desktop {
+    .telephone {
+        cursor: text;
+    }
+}
+
 
 .page {
     width: 768px;
@@ -50,6 +56,7 @@ $borderColor: #e5e5e5;
         padding: 40px 30px;
         background: #ec008c;
         color: #ffffff;
+        position: relative;
 
         h1 {
             text-align: center;
@@ -85,7 +92,7 @@ $borderColor: #e5e5e5;
 
             > ul {
                 margin: 0;
-                padding: 0 0 25px 0;
+                padding: 0 0 15px 0;
                 list-style: none;
                 clear:left;
                 float:left;
@@ -107,7 +114,28 @@ $borderColor: #e5e5e5;
 
                     &.no-link {
                         border-right: none;
-                        padding: 0 6px;
+
+                        a {
+                            float: left;
+                            padding-right: 2px;
+                        }
+
+                        .social {
+                            line-height: 130%;
+                            float: left;
+
+                            a {
+                                display: inline-block;
+                                color: $color1;
+                                background-color: #ffffff;
+                                width: 16px;
+                                height: 16px;
+                                @include border-radius(8px);
+                                font-size: 0.85em;
+                                padding: 0;
+                                margin-left: 3px;
+                            }
+                        }
                     }
 
                     a {
@@ -115,12 +143,44 @@ $borderColor: #e5e5e5;
                         text-decoration: none;
                         display: block;
                         padding: 0 6px;
-                        font-size: 0.9em;
+                        font-size: 0.95em;
                         text-transform: uppercase;
                     }
-                }
 
+                }
             }
+        }
+
+        .page-navigation {
+            position: absolute;
+            top: 420px;
+            color: $color1;
+            background-color: #ffffff;
+            width: 44px;
+            height: 44px;
+            font-size: 3.6em;
+            text-align: center;
+            line-height: 43px;
+            vertical-align:middle;
+            display:inline-block;
+            @include border-radius(22px);
+
+            &.page-left {
+                left: -22px;
+
+                 i {
+                     margin-left: -7px;
+                 }
+            }
+
+            &.page-right {
+                right: -22px;
+
+                i {
+                    margin-right: -7px;
+                }
+            }
+
         }
 
         .introduction {
@@ -138,10 +198,15 @@ $borderColor: #e5e5e5;
                     color: #ffffff;
                 }
 
+                p {
+                    padding-bottom: 7px;
+                }
+
             }
             .image {
                 float: right;
                 width: 326px;
+                padding-top: 20px;
 
                 .photo-frame {
                     width: 326px;
@@ -227,6 +292,7 @@ $borderColor: #e5e5e5;
 
                 &.subtitle {
                     font-size: 0.9em;
+                    line-height: 140%;
                 }
             }
         }
@@ -346,10 +412,6 @@ $borderColor: #e5e5e5;
                         a {
                             text-decoration: none;
                             color: #444;
-
-                            &.telephone {
-                                cursor: text;
-                            }
                         }
                     }
                 }
