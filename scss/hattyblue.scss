@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background: #9babaf;
+    color: #444444;
     font-family: 'blenda_scriptregular';
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
     font-size: small;
@@ -19,6 +20,10 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 130%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+
 img {
     border: none;
 }
@@ -28,6 +33,9 @@ $color1: #ec008c;
 $color2: #4d2977;
 $color3: #9babaf;
 
+// furniture colours
+$borderColor: #e5e5e5;
+
 // utils
 .cleft { clear: left; }
 .cboth { clear: both; }
@@ -35,7 +43,7 @@ $color3: #9babaf;
 
 .page {
     width: 768px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto;
     background: #ffffff;
 
     .header {
@@ -123,6 +131,13 @@ $color3: #9babaf;
                 float: left;
                 width: 250px;
 
+                h2 {
+                    padding: 0;
+                    font-size: 1.9em;
+                    font-weight: normal;
+                    color: #ffffff;
+                }
+
             }
             .image {
                 float: right;
@@ -132,90 +147,259 @@ $color3: #9babaf;
                     width: 326px;
                     height: 228px;
                     background: url("../images/photo-frame.png") 00 no-repeat;
+                    text-align: center;
+
+                    img {
+                        width: 240px;
+                        height: 154px;
+                        display: inline-block;
+                        padding-left: 3px;
+                        padding-top: 32px;
+                    }
                 }
             }
         }
     }
 
-    .big-links {
+    .body {
         width: 610px;
         margin: 30px auto;
 
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            float: left;
+        .big-links {
 
-            li {
+            ul {
+                margin: 0;
+                padding: 0 0 25px 0;
+                list-style: none;
                 float: left;
-                width: 192px;
+                border-bottom: 1px solid $borderColor;
 
-                &.left-link {
+                li {
+                    float: left;
+                    width: 192px;
+
+                    &.left-link {
+                        a {
+                            float: left;
+                        }
+                    }
+
+                    &.middle-link {
+                        width: 223px;
+                        text-align: center;
+                        border-right: 1px solid $borderColor;
+                        border-left: 1px solid $borderColor;
+
+                        a {
+                            display: inline-block;
+                        }
+                    }
+
+                    &.right-link {
+                        a {
+                            float: right;
+                        }
+                    }
+
                     a {
-                        float: left;
+                        display: block;
+                        text-align: center;
                     }
                 }
+            }
+        }
 
-                &.middle-link {
-                    width: 223px;
-                    text-align: center;
-                    border-right: 1px solid #cccccc;
-                    border-left: 1px solid #cccccc;
+        .circle {
+            width: 166px;
+            height: 166px;
+            @include border-radius(50%);
+            text-align: center;
+            box-sizing: border-box;
+            padding-top: 32px;
 
-                    a {
-                        display: inline-block;
-                    }
+            span {
+                display: inline-block;
+
+                &.title {
+                    font-size: 1.5em;
+                    padding-bottom: 7px;
                 }
 
-                &.right-link {
-                    a {
-                        float: right;
-                    }
+                &.subtitle {
+                    font-size: 0.9em;
                 }
+            }
+        }
 
-                a {
-                    display: block;
-                    text-align: center;
+        .pink {
+            background: $color1;
+            color: #ffffff;
+        }
+
+        .purple {
+            background: $color2;
+            color: #ffffff;
+        }
+
+        .grey {
+            background: $color3;
+            color: #ffffff;
+        }
+
+        .text-links {
+
+            ul {
+                margin: 0;
+                padding: 25px 0 0 0;
+                list-style: none;
+                width: 610px;
+                float: left;
+                overflow: hidden;
+
+                li {
+                    float: left;
+                    width: 101px;
+                    border-left: 1px solid $borderColor;
+                    box-sizing: border-box;
+                    padding-bottom: 10000px;
+                    margin-bottom: -10000px;
+
+                    span {
+                        display: block;
+                        padding: 0 7px 2px 7px;
+
+                        &.job-title,
+                        &.job-location {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            color: #000000;
+                        }
+
+                        &.job-details {
+                            font-size: 0.85em;
+                            padding-bottom: 5px;
+                        }
+                    }
+
+                    a {
+                        font-size: 0.9em;
+                        display: block;
+                        padding: 0 7px;
+                        color: $color1;
+                        text-decoration: none;
+                    }
+
+                    &.text-links-title {
+                        width: 105px;
+                        border-left: none;
+
+                        h2 {
+                            font-size: 1.6em;
+                            line-height: 110%;
+                            font-weight: normal;
+                            padding: 0 7px 5px 0;
+                        }
+
+                        span {
+                            padding: 0 7px 5px 0;
+
+                            &.subtitle {
+                                font-size: 0.85em;
+                            }
+                        }
+
+                    }
                 }
             }
         }
     }
 
-    .circle {
-        width: 166px;
-        height: 166px;
-        @include border-radius(50%);
-        text-align: center;
-        box-sizing: border-box;
-        padding-top: 30px;
+    .footer {
 
-        span {
-            display: inline-block;
+        .footer-text {
+            width: 425px;
+            margin: 0 auto;
 
-            &.title {
-                font-size: 1.5em;
-                padding-bottom: 5px;
+            .footer-text-left {
+                width: 260px;
+                float: left;
+                box-sizing: border-box;
+                background: url("../images/telephone.png") top right no-repeat;
+                padding-right: 125px;
+                padding-bottom: 40px;
+
+                h3 {
+                    font-weight: normal;
+                    font-size: 1.8em;
+                    padding: 0;
+                }
+
+                p {
+                    font-size: 0.75em;
+                    padding: 0 0 5px 0;
+                    line-height: 140%;
+
+                    &.contact {
+                        font-size: 0.7em;
+
+                        a {
+                            text-decoration: none;
+                            color: #444;
+
+                            &.telephone {
+                                cursor: text;
+                            }
+                        }
+                    }
+                }
             }
 
-            &.subtitle {
-                padding: 0 10px;
+            .footer-text-right {
+                width: 130px;
+                float: right;
+
+                h3 {
+                    font-weight: normal;
+                    font-size: 0.8em;
+                    padding: 0;
+                }
+
+                address,
+                p {
+                    font-size: 0.8em;
+                    font-style: normal;
+                }
             }
         }
-    }
 
-    .pink {
-        background: $color1;
-        color: #ffffff;
-    }
+        .logo-box {
+            width: 100%;
 
-    .purple {
-        background: $color2;
-        color: #ffffff;
-    }
+            .footer-logos {
+                position: relative;
+                width: 685px;
+                margin: 0 auto;
+                padding-bottom: 20px;
 
-    .grey {
-        background: $color3;
-        color: #ffffff;
+                .footer-logo-left {
+                    float: left;
+                    position: absolute;
+                    left: 0;
+                    top: -70px;
+                }
+
+                .footer-logo-right {
+                    float: right;
+                    position: absolute;
+                    right: 0;
+                    top: -70px;
+
+                    img {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
     }
 }

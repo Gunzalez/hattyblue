@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background: #9babaf;
+  color: #444444;
   font-family: 'blenda_scriptregular';
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
   font-size: small;
@@ -19,6 +20,9 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0 0 12px 0;
   line-height: 130%; }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; }
+
 img {
   border: none; }
 
@@ -30,7 +34,7 @@ img {
 
 .page {
   width: 768px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto;
   background: #ffffff; }
   .page .header {
     padding: 40px 30px;
@@ -94,60 +98,171 @@ img {
       .page .header .introduction .copy {
         float: left;
         width: 250px; }
+        .page .header .introduction .copy h2 {
+          padding: 0;
+          font-size: 1.9em;
+          font-weight: normal;
+          color: #ffffff; }
       .page .header .introduction .image {
         float: right;
         width: 326px; }
         .page .header .introduction .image .photo-frame {
           width: 326px;
           height: 228px;
-          background: url("../images/photo-frame.png") 0 no-repeat; }
-  .page .big-links {
+          background: url("../images/photo-frame.png") 0 no-repeat;
+          text-align: center; }
+          .page .header .introduction .image .photo-frame img {
+            width: 240px;
+            height: 154px;
+            display: inline-block;
+            padding-left: 3px;
+            padding-top: 32px; }
+  .page .body {
     width: 610px;
     margin: 30px auto; }
-    .page .big-links ul {
+    .page .body .big-links ul {
       margin: 0;
-      padding: 0;
+      padding: 0 0 25px 0;
       list-style: none;
-      float: left; }
-      .page .big-links ul li {
+      float: left;
+      border-bottom: 1px solid #e5e5e5; }
+      .page .body .big-links ul li {
         float: left;
         width: 192px; }
-        .page .big-links ul li.left-link a {
+        .page .body .big-links ul li.left-link a {
           float: left; }
-        .page .big-links ul li.middle-link {
+        .page .body .big-links ul li.middle-link {
           width: 223px;
           text-align: center;
-          border-right: 1px solid #cccccc;
-          border-left: 1px solid #cccccc; }
-          .page .big-links ul li.middle-link a {
+          border-right: 1px solid #e5e5e5;
+          border-left: 1px solid #e5e5e5; }
+          .page .body .big-links ul li.middle-link a {
             display: inline-block; }
-        .page .big-links ul li.right-link a {
+        .page .body .big-links ul li.right-link a {
           float: right; }
-        .page .big-links ul li a {
+        .page .body .big-links ul li a {
           display: block;
           text-align: center; }
-  .page .circle {
-    width: 166px;
-    height: 166px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    text-align: center;
-    box-sizing: border-box;
-    padding-top: 30px; }
-    .page .circle span {
-      display: inline-block; }
-      .page .circle span.title {
-        font-size: 1.5em;
-        padding-bottom: 5px; }
-      .page .circle span.subtitle {
-        padding: 0 10px; }
-  .page .pink {
-    background: #ec008c;
-    color: #ffffff; }
-  .page .purple {
-    background: #4d2977;
-    color: #ffffff; }
-  .page .grey {
-    background: #9babaf;
-    color: #ffffff; }
+    .page .body .circle {
+      width: 166px;
+      height: 166px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 32px; }
+      .page .body .circle span {
+        display: inline-block; }
+        .page .body .circle span.title {
+          font-size: 1.5em;
+          padding-bottom: 7px; }
+        .page .body .circle span.subtitle {
+          font-size: 0.9em; }
+    .page .body .pink {
+      background: #ec008c;
+      color: #ffffff; }
+    .page .body .purple {
+      background: #4d2977;
+      color: #ffffff; }
+    .page .body .grey {
+      background: #9babaf;
+      color: #ffffff; }
+    .page .body .text-links ul {
+      margin: 0;
+      padding: 25px 0 0 0;
+      list-style: none;
+      width: 610px;
+      float: left;
+      overflow: hidden; }
+      .page .body .text-links ul li {
+        float: left;
+        width: 101px;
+        border-left: 1px solid #e5e5e5;
+        box-sizing: border-box;
+        padding-bottom: 10000px;
+        margin-bottom: -10000px; }
+        .page .body .text-links ul li span {
+          display: block;
+          padding: 0 7px 2px 7px; }
+          .page .body .text-links ul li span.job-title, .page .body .text-links ul li span.job-location {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            color: #000000; }
+          .page .body .text-links ul li span.job-details {
+            font-size: 0.85em;
+            padding-bottom: 5px; }
+        .page .body .text-links ul li a {
+          font-size: 0.9em;
+          display: block;
+          padding: 0 7px;
+          color: #ec008c;
+          text-decoration: none; }
+        .page .body .text-links ul li.text-links-title {
+          width: 105px;
+          border-left: none; }
+          .page .body .text-links ul li.text-links-title h2 {
+            font-size: 1.6em;
+            line-height: 110%;
+            font-weight: normal;
+            padding: 0 7px 5px 0; }
+          .page .body .text-links ul li.text-links-title span {
+            padding: 0 7px 5px 0; }
+            .page .body .text-links ul li.text-links-title span.subtitle {
+              font-size: 0.85em; }
+  .page .footer .footer-text {
+    width: 425px;
+    margin: 0 auto; }
+    .page .footer .footer-text .footer-text-left {
+      width: 260px;
+      float: left;
+      box-sizing: border-box;
+      background: url("../images/telephone.png") top right no-repeat;
+      padding-right: 125px;
+      padding-bottom: 40px; }
+      .page .footer .footer-text .footer-text-left h3 {
+        font-weight: normal;
+        font-size: 1.8em;
+        padding: 0; }
+      .page .footer .footer-text .footer-text-left p {
+        font-size: 0.75em;
+        padding: 0 0 5px 0;
+        line-height: 140%; }
+        .page .footer .footer-text .footer-text-left p.contact {
+          font-size: 0.7em; }
+          .page .footer .footer-text .footer-text-left p.contact a {
+            text-decoration: none;
+            color: #444; }
+            .page .footer .footer-text .footer-text-left p.contact a.telephone {
+              cursor: text; }
+    .page .footer .footer-text .footer-text-right {
+      width: 130px;
+      float: right; }
+      .page .footer .footer-text .footer-text-right h3 {
+        font-weight: normal;
+        font-size: 0.8em;
+        padding: 0; }
+      .page .footer .footer-text .footer-text-right address,
+      .page .footer .footer-text .footer-text-right p {
+        font-size: 0.8em;
+        font-style: normal; }
+  .page .footer .logo-box {
+    width: 100%; }
+    .page .footer .logo-box .footer-logos {
+      position: relative;
+      width: 685px;
+      margin: 0 auto;
+      padding-bottom: 20px; }
+      .page .footer .logo-box .footer-logos .footer-logo-left {
+        float: left;
+        position: absolute;
+        left: 0;
+        top: -70px; }
+      .page .footer .logo-box .footer-logos .footer-logo-right {
+        float: right;
+        position: absolute;
+        right: 0;
+        top: -70px; }
+        .page .footer .logo-box .footer-logos .footer-logo-right img {
+          margin-left: 10px; }
