@@ -3,38 +3,219 @@ body {
     padding: 0;
     background: #9babaf;
     font-family: 'blenda_scriptregular';
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
+    font-size: small;
+    -webkit-text-size-adjust: none;
 }
 
+
+@import "mixins";
 @import "fonts";
 
 // resets
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
-    padding: 0;
+    padding: 0 0 12px 0;
+    line-height: 130%;
 }
+
+img {
+    border: none;
+}
+
+// colours
+$color1: #ec008c;
+$color2: #4d2977;
+$color3: #9babaf;
+
+// utils
+.cleft { clear: left; }
+.cboth { clear: both; }
+
 
 .page {
     width: 768px;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     background: #ffffff;
 
     .header {
-        text-align: center;
-        padding-top: 40px;
+        padding: 40px 30px;
         background: #ec008c;
+        color: #ffffff;
 
         h1 {
+            text-align: center;
             margin: 0;
             padding: 0;
-
             a {
-                display: block;
+                display: inline-block;
             }
-
         }
 
         p {
             color: #ffffff;
+            font-size: 1.0em;
         }
+
+        .subtitle {
+            text-align: center;
+
+            p {
+                display: inline-block;
+                font-size: 1.2em;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #4d2977;
+            }
+        }
+
+        .navigation {
+            padding: 15px 0;
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+            > ul {
+                margin: 0;
+                padding: 0 0 25px 0;
+                list-style: none;
+                clear:left;
+                float:left;
+                position:relative;
+                left:50%;
+                text-align:center;
+
+                li {
+                    display:block;
+                    float:left;
+                    list-style:none;
+                    margin:0;
+                    padding:0;
+                    position:relative;
+                    right:50%;
+                    border-right: 1px solid #ffffff;
+                    color: #ffffff;
+                    line-height: 130%;
+
+                    &.no-link {
+                        border-right: none;
+                        padding: 0 6px;
+                    }
+
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                        display: block;
+                        padding: 0 6px;
+                        font-size: 0.9em;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+        }
+
+        .introduction {
+            width: 610px;
+            margin: 0 auto;
+
+            .copy {
+                float: left;
+                width: 250px;
+
+            }
+            .image {
+                float: right;
+                width: 326px;
+
+                .photo-frame {
+                    width: 326px;
+                    height: 228px;
+                    background: url("../images/photo-frame.png") 00 no-repeat;
+                }
+            }
+        }
+    }
+
+    .big-links {
+        width: 610px;
+        margin: 30px auto;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            float: left;
+
+            li {
+                float: left;
+                width: 192px;
+
+                &.left-link {
+                    a {
+                        float: left;
+                    }
+                }
+
+                &.middle-link {
+                    width: 223px;
+                    text-align: center;
+                    border-right: 1px solid #cccccc;
+                    border-left: 1px solid #cccccc;
+
+                    a {
+                        display: inline-block;
+                    }
+                }
+
+                &.right-link {
+                    a {
+                        float: right;
+                    }
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .circle {
+        width: 166px;
+        height: 166px;
+        @include border-radius(50%);
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 30px;
+
+        span {
+            display: inline-block;
+
+            &.title {
+                font-size: 1.5em;
+                padding-bottom: 5px;
+            }
+
+            &.subtitle {
+                padding: 0 10px;
+            }
+        }
+    }
+
+    .pink {
+        background: $color1;
+        color: #ffffff;
+    }
+
+    .purple {
+        background: $color2;
+        color: #ffffff;
+    }
+
+    .grey {
+        background: $color3;
+        color: #ffffff;
     }
 }

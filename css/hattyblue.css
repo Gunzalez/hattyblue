@@ -2,7 +2,10 @@ body {
   margin: 0;
   padding: 0;
   background: #9babaf;
-  font-family: 'blenda_scriptregular'; }
+  font-family: 'blenda_scriptregular';
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
+  font-size: small;
+  -webkit-text-size-adjust: none; }
 
 @font-face {
   font-family: 'blenda_scriptregular';
@@ -13,20 +16,138 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
-  padding: 0; }
+  padding: 0 0 12px 0;
+  line-height: 130%; }
+
+img {
+  border: none; }
+
+.cleft {
+  clear: left; }
+
+.cboth {
+  clear: both; }
 
 .page {
   width: 768px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
   background: #ffffff; }
   .page .header {
-    text-align: center;
-    padding-top: 40px;
-    background: #ec008c; }
+    padding: 40px 30px;
+    background: #ec008c;
+    color: #ffffff; }
     .page .header h1 {
+      text-align: center;
       margin: 0;
       padding: 0; }
       .page .header h1 a {
-        display: block; }
+        display: inline-block; }
     .page .header p {
-      color: #ffffff; }
+      color: #ffffff;
+      font-size: 1.0em; }
+    .page .header .subtitle {
+      text-align: center; }
+      .page .header .subtitle p {
+        display: inline-block;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4d2977; }
+    .page .header .navigation {
+      padding: 15px 0;
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      position: relative; }
+      .page .header .navigation > ul {
+        margin: 0;
+        padding: 0 0 25px 0;
+        list-style: none;
+        clear: left;
+        float: left;
+        position: relative;
+        left: 50%;
+        text-align: center; }
+        .page .header .navigation > ul li {
+          display: block;
+          float: left;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: relative;
+          right: 50%;
+          border-right: 1px solid #ffffff;
+          color: #ffffff;
+          line-height: 130%; }
+          .page .header .navigation > ul li.no-link {
+            border-right: none;
+            padding: 0 6px; }
+          .page .header .navigation > ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            display: block;
+            padding: 0 6px;
+            font-size: 0.9em;
+            text-transform: uppercase; }
+    .page .header .introduction {
+      width: 610px;
+      margin: 0 auto; }
+      .page .header .introduction .copy {
+        float: left;
+        width: 250px; }
+      .page .header .introduction .image {
+        float: right;
+        width: 326px; }
+        .page .header .introduction .image .photo-frame {
+          width: 326px;
+          height: 228px;
+          background: url("../images/photo-frame.png") 0 no-repeat; }
+  .page .big-links {
+    width: 610px;
+    margin: 30px auto; }
+    .page .big-links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      float: left; }
+      .page .big-links ul li {
+        float: left;
+        width: 192px; }
+        .page .big-links ul li.left-link a {
+          float: left; }
+        .page .big-links ul li.middle-link {
+          width: 223px;
+          text-align: center;
+          border-right: 1px solid #cccccc;
+          border-left: 1px solid #cccccc; }
+          .page .big-links ul li.middle-link a {
+            display: inline-block; }
+        .page .big-links ul li.right-link a {
+          float: right; }
+        .page .big-links ul li a {
+          display: block;
+          text-align: center; }
+  .page .circle {
+    width: 166px;
+    height: 166px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 30px; }
+    .page .circle span {
+      display: inline-block; }
+      .page .circle span.title {
+        font-size: 1.5em;
+        padding-bottom: 5px; }
+      .page .circle span.subtitle {
+        padding: 0 10px; }
+  .page .pink {
+    background: #ec008c;
+    color: #ffffff; }
+  .page .purple {
+    background: #4d2977;
+    color: #ffffff; }
+  .page .grey {
+    background: #9babaf;
+    color: #ffffff; }
