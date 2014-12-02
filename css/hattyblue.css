@@ -251,9 +251,10 @@ img {
             color: #000000; }
           .page .body .text-links ul li span.job-details {
             font-size: 0.85em;
-            padding-bottom: 5px; }
+            padding-bottom: 5px;
+            line-height: 120%; }
         .page .body .text-links ul li a {
-          font-size: 0.9em;
+          font-size: 1.0em;
           display: block;
           padding: 0 7px;
           color: #ec008c;
@@ -269,7 +270,8 @@ img {
           .page .body .text-links ul li.text-links-title span {
             padding: 0 7px 5px 0; }
             .page .body .text-links ul li.text-links-title span.subtitle {
-              font-size: 0.85em; }
+              font-size: 0.85em;
+              line-height: 120%; }
     .page .body .read-more {
       font-family: "blenda_scriptregular"; }
   .page .footer .footer-text {
@@ -381,8 +383,8 @@ img {
         width: 220px; }
         .page .footer .footer-text .footer-text-right h3 {
           font-weight: normal;
-          font-size: 1.8em;
-          padding: 0; }
+          font-size: 1.4em;
+          padding: 4px 0 0 0; }
         .page .footer .footer-text .footer-text-right address,
         .page .footer .footer-text .footer-text-right p {
           font-size: 0.8em;
@@ -476,7 +478,7 @@ img {
           .page .body .text-links ul li.text-links-title span {
             padding: 0 0 5px 0; }
             .page .body .text-links ul li.text-links-title span.subtitle {
-              font-size: 0.85em; }
+              font-size: 0.9em; }
   .page .footer {
     padding: 0 30px; }
     .page .footer .footer-text {
@@ -526,7 +528,7 @@ img {
       -o-transition: height 0.5s;
       transition: height 0.5s; }
     .page .header .navigation.displayed {
-      height: 178px;
+      height: 180px;
       -webkit-transition: height 0.5s;
       -moz-transition: height 0.5s;
       -o-transition: height 0.5s;
@@ -594,8 +596,8 @@ img {
   .page .body {
     margin: 30px 20px; }
     .page .body .big-links .circle {
-      width: 130px;
-      height: 130px; }
+      width: 128px;
+      height: 128px; }
       .page .body .big-links .circle span.title {
         padding-top: 1px; }
       .page .body .big-links .circle span.subtitle {
