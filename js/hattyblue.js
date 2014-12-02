@@ -17,12 +17,14 @@
         },
         resize : function(){
             console.log(hattyblue.properties.windowWidth);
+
+
         },
         init: function(){
             var self = hattyblue;
             // window size
             self.properties.windowWidth = $(window).width();
-            // device type
+            // desktop or mobile
             if(self.environment.mobileCheck()){
                 self.environment.isMobile = true;
                 $('html').addClass('mobile');
@@ -33,12 +35,57 @@
         }
     };
 
+    hattyblue.mobile = {
+        $html: $('.navigation ul'),
+        $button: $('#mobile-nav-button'),
+
+
+        menuAction: function(action) {
+            var self = this;
+
+            self.$html.removeClass();
+            if(action == 'open'){
+                self.$html.addClass('displayed');
+            } else if (action == 'close'){
+                self.$html.addClass('hidden');
+            }
+        },
+        resize: function(){
+            var self = this;
+
+            // repositions mobile nav button
+            self.$button.css('left', $('#hattyblue-logo img').position().left + $('#hattyblue-logo img').width() - 10);
+
+            // hide menu
+            self.menuAction('close');
+            self.$button.removeClass('close').addClass('open');
+        },
+        init: function(){
+            var self = this;
+
+            self.$button.on('click', function(){
+               if(self.$button.hasClass('open')){
+                   self.$button.removeClass('open').addClass('close');
+                   self.menuAction('open');
+               } else {
+                   self.$button.removeClass('close').addClass('open');
+                   self.menuAction('close');
+               }
+            });
+        }
+    };
+
 	hattyblue.init = function(){
 
-        // Other init
+        // other init
         hattyblue.environment.init();
+        hattyblue.mobile.init();
+        //
+        //
+        //
+        //
 
-        // Resize triggers
+        // resize triggers
 		$(window).on('resize',function(){
 			
 			var newWidth = $(window).width(),
@@ -54,12 +101,18 @@
         $(window).trigger('resize');
 	};
 
-    // Main resize
+    // main resize
     hattyblue.resize = function(){
         hattyblue.environment.resize();
+        hattyblue.mobile.resize();
+        //
+        //
+        //
+        //
+
     };
 
-    // Main init
+    // main init
 	$(document).ready(function(){
 		hattyblue.init();
 	});

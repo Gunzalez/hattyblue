@@ -1,1 +1,25 @@
-Sets up project and starts on homepage                  3.5hrs
+Sets up project and starts on homepage                  3.5 hrs  - Friday 28th November
+Completes homepage, web version (-minus favicon)        4.0 hrs  - Saturday 29th November
+Starts responsive on Homepage, footer, header and menu  3.0 hrs  - Sunday 30th December (midnight)
+Completes responsive on homepage                        4.5 hrs  - Monday night, 1st December
+
+
+TODO
+===============================
+Fix favicon
+
+
+
+
+
+PHP
+================================
+Left Right page navigation
+
+
+
+
+NICE TO HAVE
+===============================
+Smooth CSS animation on mobile navigation
+
