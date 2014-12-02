@@ -4,11 +4,11 @@
     border-radius: $radius;
 }
 
-@mixin transitions{
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+@mixin transitions(){
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
 }
 
 @mixin transition-background($speed: 0.2s){
@@ -16,6 +16,13 @@
     -moz-transition: background $speed;
     -o-transition: background $speed;
     transition: background $speed;
+}
+
+@mixin transitions-height($distance: 0.5s){
+    -webkit-transition: height $distance;
+    -moz-transition: height $distance;
+    -o-transition: height $distance;
+    transition: height $distance;
 }
 
 @mixin clearfix {

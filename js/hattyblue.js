@@ -9,6 +9,12 @@
         isDesktop : false
     };
 
+    hattyblue.utils = {
+        swapClass: function($obj, classToRemove, classToAdd){
+            $obj.removeClass(classToRemove).addClass(classToAdd);
+        }
+    };
+
     hattyblue.environment = {
         mobileCheck : function() {
             var check = false;
@@ -16,7 +22,6 @@
             return check;
         },
         resize : function(){
-            console.log(hattyblue.properties.windowWidth);
 
 
         },
@@ -36,25 +41,24 @@
     };
 
     hattyblue.mobile = {
-        $html: $('.navigation ul'),
+        $html: $('.navigation'),
         $button: $('#mobile-nav-button'),
-
 
         menuAction: function(action) {
             var self = this;
-
-            self.$html.removeClass();
             if(action == 'open'){
-                self.$html.addClass('displayed');
+                hattyblue.utils.swapClass(self.$html, 'hidden', 'displayed');
             } else if (action == 'close'){
-                self.$html.addClass('hidden');
+                hattyblue.utils.swapClass(self.$html, 'displayed', 'hidden');
             }
         },
         resize: function(){
-            var self = this;
+            var self = this,
+                $logoDiv = $('#hattyblue-logo'),
+                $logoImg = $('img',$logoDiv);
 
             // repositions mobile nav button
-            self.$button.css('left', $('#hattyblue-logo img').position().left + $('#hattyblue-logo img').width() - 10);
+            self.$button.css('left', $logoImg.position().left + $logoImg.width() - 10);
 
             // hide menu
             self.menuAction('close');
@@ -65,14 +69,25 @@
 
             self.$button.on('click', function(){
                if(self.$button.hasClass('open')){
-                   self.$button.removeClass('open').addClass('close');
+                   hattyblue.utils.swapClass(self.$button, 'open', 'close');
                    self.menuAction('open');
                } else {
-                   self.$button.removeClass('close').addClass('open');
+                   hattyblue.utils.swapClass(self.$button, 'close', 'open');
                    self.menuAction('close');
                }
             });
         }
+    };
+
+    // main resize
+    hattyblue.resize = function(){
+        hattyblue.environment.resize();
+        hattyblue.mobile.resize();
+        //
+        //
+        //
+        //
+
     };
 
 	hattyblue.init = function(){
@@ -87,12 +102,13 @@
 
         // resize triggers
 		$(window).on('resize',function(){
-			
+
 			var newWidth = $(window).width(),
                 oldWidth = hattyblue.properties.windowWidth;
 
 			if(oldWidth != newWidth){
                 hattyblue.properties.windowWidth = newWidth;
+                console.log(hattyblue.properties.windowWidth);
 				hattyblue.resize();
 			}
 		});
@@ -100,17 +116,6 @@
         hattyblue.resize();
         $(window).trigger('resize');
 	};
-
-    // main resize
-    hattyblue.resize = function(){
-        hattyblue.environment.resize();
-        hattyblue.mobile.resize();
-        //
-        //
-        //
-        //
-
-    };
 
     // main init
 	$(document).ready(function(){

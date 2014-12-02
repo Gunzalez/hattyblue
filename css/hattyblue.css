@@ -19,11 +19,11 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0 0 12px 0;
   line-height: 130%;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
-  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; }
+  color: #000000; }
 
 img {
   border: none; }
@@ -119,7 +119,8 @@ img {
             display: block;
             padding: 0 6px;
             font-size: 0.95em;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; }
     .page .header .page-navigation {
       position: absolute;
       top: 420px;
@@ -269,6 +270,8 @@ img {
             padding: 0 7px 5px 0; }
             .page .body .text-links ul li.text-links-title span.subtitle {
               font-size: 0.85em; }
+    .page .body .read-more {
+      font-family: "blenda_scriptregular"; }
   .page .footer .footer-text {
     width: 425px;
     margin: 0 auto; }
@@ -287,7 +290,7 @@ img {
         font-size: 0.8em;
         padding: 0 0 5px 0;
         line-height: 140%;
-        font-family: tahoma, trebuchet; }
+        font-family: Arial; }
         .page .footer .footer-text .footer-text-left p.contact {
           font-size: 0.7em; }
           .page .footer .footer-text .footer-text-left p.contact a {
@@ -305,8 +308,8 @@ img {
           -webkit-border-radius: 16px;
           -moz-border-radius: 16px;
           border-radius: 16px;
-          font-size: 1.5em;
-          padding: 5px 0 0 0;
+          font-size: 1.4em;
+          padding: 7px 0 0 0;
           margin-right: 3px;
           text-align: center;
           box-sizing: border-box; }
@@ -321,7 +324,7 @@ img {
       .page .footer .footer-text .footer-text-right p {
         font-size: 0.8em;
         font-style: normal;
-        font-family: tahoma, trebuchet; }
+        font-family: Arial; }
   .page .footer .logo-box {
     width: 100%; }
     .page .footer .logo-box .footer-logos {
@@ -399,7 +402,8 @@ img {
     padding: 0 30px; }
     .page .header .introduction .copy {
       float: none;
-      width: 100%; }
+      width: 100%;
+      padding-top: 15px; }
       .page .header .introduction .copy h2 {
         padding-bottom: 10px; }
     .page .header .introduction .image {
@@ -493,16 +497,20 @@ img {
     display: inherit;
     padding: 0 30px 10px 30px; }
   .page .header .navigation {
-    padding-top: 0; }
+    padding: 0;
+    height: 0px;
+    /* js controlled */
+    position: relative;
+    /* used by js */
+    /* --------- */ }
     .page .header .navigation > ul {
       float: none;
-      left: inherit;
       background-color: #4d2977;
       padding: 15px 30px;
-      display: none;
-      /* js controlled */
-      /* used by js */
-      /* --------- */ }
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0; }
       .page .header .navigation > ul li {
         float: none;
         right: inherit;
@@ -510,48 +518,67 @@ img {
         text-align: left;
         padding: 0; }
         .page .header .navigation > ul li a {
-          padding: 3px 0; }
-      .page .header .navigation > ul.hidden {
-        display: none; }
-      .page .header .navigation > ul.displayed {
-        display: block; }
+          padding: 5px 0; }
+    .page .header .navigation.hidden {
+      height: 0px;
+      -webkit-transition: height 0.5s;
+      -moz-transition: height 0.5s;
+      -o-transition: height 0.5s;
+      transition: height 0.5s; }
+    .page .header .navigation.displayed {
+      height: 178px;
+      -webkit-transition: height 0.5s;
+      -moz-transition: height 0.5s;
+      -o-transition: height 0.5s;
+      transition: height 0.5s; }
 
   #mobile-nav-button {
     display: block;
     position: absolute;
-    top: 157px;
+    top: 156px;
     left: 0;
-    /* js controlled */ }
+    /* js controlled */
+    width: 34px;
+    height: 34px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden; }
     #mobile-nav-button span {
-      width: 30px;
-      height: 30px;
+      width: 34px;
+      height: 34px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       border-radius: 50%;
       text-align: center;
       box-sizing: border-box;
-      padding-top: 4px;
+      padding-top: 6px;
       font-size: 1.5em;
       display: inline-block; }
-      #mobile-nav-button span.open {
-        background-color: #ffffff;
-        color: #ec008c; }
-      #mobile-nav-button span.close {
-        background-color: #4d2977;
-        color: #ffffff; }
-    #mobile-nav-button.open .open {
-      display: block; }
-    #mobile-nav-button.open .close {
+    #mobile-nav-button.open span {
+      background-color: #ffffff;
+      color: #ec008c;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+    #mobile-nav-button.open .fa-close {
       display: none; }
-    #mobile-nav-button.close .open {
-      display: none; }
-    #mobile-nav-button.close .close {
-      padding-top: 3px;
-      display: block; } }
+    #mobile-nav-button.close span {
+      padding-top: 5px;
+      background-color: #4d2977;
+      color: #ffffff;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      -o-transition: all 0.25s;
+      transition: all 0.25s; }
+    #mobile-nav-button.close .fa-bars {
+      display: none; } }
 @media only screen and (max-width: 450px) {
   .page .header .subtitle p {
     display: inherit;
-    padding: 0 20px 10px 20px; }
+    padding: 0 20px 15px 20px;
+    font-size: 1.3em; }
   .page .header .navigation > ul {
     padding: 15px 20px; }
   .page .header .introduction {
@@ -570,7 +597,7 @@ img {
       width: 130px;
       height: 130px; }
       .page .body .big-links .circle span.title {
-        padding-top: 2px; }
+        padding-top: 1px; }
       .page .body .big-links .circle span.subtitle {
         display: none; }
     .page .body .big-links .left-link .title,

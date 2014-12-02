@@ -3,7 +3,8 @@
 
 // fonts
 $hattyFont1: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
-$hattyFont2: tahoma, trebuchet;
+$hattyFont2: Arial;
+$hattyFont3: 'blenda_scriptregular';
 
 // colours
 $color1: #ec008c;
@@ -19,7 +20,7 @@ body {
     background: #9babaf;
     color: #444444;
     font-family: 'blenda_scriptregular';
-    font-family: Arial;
+    font-family: $hattyFont2;
     font-size: small;
     -webkit-text-size-adjust: none;
 }
@@ -30,11 +31,12 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0 0 12px 0;
     line-height: 130%;
     -webkit-font-smoothing: antialiased;
+    font-family: $hattyFont1;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
-    font-family: $hattyFont1;
 }
 
 img {
@@ -155,6 +157,7 @@ img {
                         padding: 0 6px;
                         font-size: 0.95em;
                         text-transform: uppercase;
+                        font-family: $hattyFont1;
                     }
 
                 }
@@ -392,6 +395,10 @@ img {
                 }
             }
         }
+
+        .read-more {
+            font-family: $hattyFont3;
+        }
     }
 
     .footer {
@@ -441,8 +448,8 @@ img {
                         width: 32px;
                         height: 32px;
                         @include border-radius(16px);
-                        font-size: 1.5em;
-                        padding: 5px 0 0 0;
+                        font-size: 1.4em;
+                        padding: 7px 0 0 0;
                         margin-right: 3px;
                         text-align: center;
                         box-sizing: border-box;
@@ -617,6 +624,7 @@ img {
                 .copy {
                     float: none;
                     width: 100%;
+                    padding-top: 15px;
 
                     h2 {
                         padding-bottom: 10px;
@@ -804,14 +812,18 @@ img {
             }
 
             .navigation {
-                padding-top: 0;
+                padding: 0;
+                height: 0px; /* js controlled */
+                position: relative;
 
                 > ul {
                     float: none;
-                    left: inherit;
                     background-color: $color2;
                     padding: 15px 30px;
-                    display: none; /* js controlled */
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
 
                     li {
                         float: none;
@@ -821,21 +833,22 @@ img {
                         padding: 0;
 
                         a {
-                            padding: 3px 0;
+                            padding: 5px 0;
                         }
                     }
-
-                    /* used by js */
-                    &.hidden {
-                        display: none;
-                    }
-
-                    &.displayed {
-                        display: block;
-                    }
-                    /* --------- */
-
                 }
+
+                /* used by js */
+                &.hidden {
+                    height: 0px;
+                    @include transitions-height();
+                }
+
+                &.displayed {
+                    height: 178px;
+                    @include transitions-height();
+                }
+                /* --------- */
             }
         }
     }
@@ -843,48 +856,44 @@ img {
     #mobile-nav-button {
         display: block;
         position: absolute;
-        top: 157px;
+        top: 156px;
         left: 0; /* js controlled */
+        width: 34px;
+        height: 34px;
+        @include border-radius(50%);
+        overflow: hidden;
 
         span {
-            width: 30px;
-            height: 30px;
+            width: 34px;
+            height: 34px;
             @include border-radius(50%);
             text-align: center;
             box-sizing: border-box;
-            padding-top: 4px;
+            padding-top: 6px;
             font-size: 1.5em;
             display: inline-block;
-
-            &.open {
-                background-color: #ffffff;
-                color: $color1;
-            }
-
-            &.close {
-                background-color: $color2;
-                color: #ffffff;
-            }
         }
 
         &.open {
-
-            .open {
-                display: block;
+            span {
+                background-color: #ffffff;
+                color: $color1;
+                @include transitions();
             }
-            .close {
+            .fa-close {
                 display: none;
             }
         }
 
         &.close {
-
-            .open {
-                display: none;
+            span {
+                padding-top: 5px;
+                background-color: $color2;
+                color: #ffffff;
+                @include transitions();
             }
-            .close {
-                padding-top: 3px;
-                display: block;
+            .fa-bars {
+                display: none;
             }
         }
     }
@@ -899,7 +908,8 @@ img {
 
                 p {
                     display: inherit;
-                    padding: 0 20px 10px 20px;
+                    padding: 0 20px 15px 20px;
+                    font-size: 1.3em;
                 }
             }
 
@@ -942,7 +952,7 @@ img {
                     span {
 
                         &.title {
-                            padding-top: 2px;
+                            padding-top: 1px;
                         }
 
                         &.subtitle {
