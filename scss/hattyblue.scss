@@ -63,8 +63,34 @@ img {
     margin: 0 auto;
     background: #ffffff;
 
+    /* general to page */
+    .circle {
+        @include border-radius(50%);
+        text-align: center;
+        box-sizing: border-box;
+
+        span {
+            display: inline-block;
+        }
+    }
+
+    .pink {
+        background: $color1;
+        color: #ffffff;
+    }
+
+    .purple {
+        background: $color2;
+        color: #ffffff;
+    }
+
+    .grey {
+        background: $color3;
+        color: #ffffff;
+    }
+
     .header {
-        padding: 40px 0;
+        padding: 40px 0 20px 0;
         background: #ec008c;
         color: #ffffff;
         position: relative;
@@ -96,7 +122,7 @@ img {
         }
 
         .navigation {
-            padding: 15px 0;
+            padding: 15px 0 0 0;
             float: left;
             width: 100%;
             overflow: hidden;
@@ -196,6 +222,77 @@ img {
 
         }
 
+        /* general to header */
+        h2 {
+            padding: 0 0 15px 0;
+            font-size: 2.0em;
+            font-weight: normal;
+            color: #ffffff;
+        }
+
+        p {
+            padding-bottom: 7px;
+        }
+
+        .form {
+            padding-top: 5px;
+
+            input {
+                -webkit-appearance: none;
+            }
+
+            .circle {
+                width: 31px;
+                height: 31px;
+                display: inline-block;
+
+                span {
+                    padding: 8px 0;
+                    text-transform: uppercase;
+                    font-size: 0.9em;
+                    text-align: center;
+                }
+            }
+
+            .row {
+                display: block;
+                padding-bottom: 10px;
+                text-align: center;
+
+                label {
+                    display: none;
+                }
+
+                select {
+                    width: 100%;
+                    font-family: $hattyFont1;
+                    padding: 5px;
+                    font-size: 1.2em;
+                    border: none;
+                    @include border-radius(6px);
+                    cursor: pointer;
+                }
+
+                &.submit {
+                    text-align: right;
+                    padding-top: 10px;
+
+                    input {
+                        border: none;
+                        @include border-radius(6px);
+                        font-family: $hattyFont1;
+                        padding: 5px 25px;
+                        font-size: 1.1em;
+                        color: #ffffff;
+                        background-color: $color2;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+        /* general to header */
+
         .introduction {
             width: 610px;
             margin: 0 auto;
@@ -203,23 +300,12 @@ img {
             .copy {
                 float: left;
                 width: 250px;
-
-                h2 {
-                    padding: 0 0 5px 0;
-                    font-size: 1.9em;
-                    font-weight: normal;
-                    color: #ffffff;
-                }
-
-                p {
-                    padding-bottom: 7px;
-                }
-
+                padding-bottom: 15px;
             }
+
             .image {
                 float: right;
                 width: 326px;
-                padding-top: 30px;
 
                 .photo-frame {
                     width: 326px;
@@ -235,6 +321,21 @@ img {
                         padding-top: 32px;
                     }
                 }
+            }
+        }
+
+        .search-form {
+            width: 610px;
+            margin: 0 auto;
+
+            .copy {
+                float: left;
+                width: 370px;
+            }
+
+            .form-box {
+                float: right;
+                width: 200px;
             }
         }
     }
@@ -290,13 +391,9 @@ img {
         .circle {
             width: 166px;
             height: 166px;
-            @include border-radius(50%);
-            text-align: center;
-            box-sizing: border-box;
             padding-top: 32px;
 
             span {
-                display: inline-block;
 
                 &.title {
                     font-size: 1.5em;
@@ -310,21 +407,6 @@ img {
                     font-family: $hattyFont1;
                 }
             }
-        }
-
-        .pink {
-            background: $color1;
-            color: #ffffff;
-        }
-
-        .purple {
-            background: $color2;
-            color: #ffffff;
-        }
-
-        .grey {
-            background: $color3;
-            color: #ffffff;
         }
 
         .text-links {
@@ -626,7 +708,6 @@ img {
                 .copy {
                     float: none;
                     width: 100%;
-                    padding-top: 15px;
 
                     h2 {
                         padding-bottom: 10px;
@@ -642,6 +723,28 @@ img {
                     }
                 }
             }
+
+            .search-form {
+                width: auto;
+                margin: 0 auto;
+                padding: 0 30px;
+
+                .copy {
+                    float: none;
+                    width: 100%;
+                }
+
+                .form-box {
+                    float: none;
+                    width: 100%;
+
+                    .form {
+                        margin: 0 auto;
+                        padding-top: 15px;
+                    }
+                }
+            }
+
         }
 
         .body {
@@ -687,26 +790,6 @@ img {
                             display: block;
                             text-align: center;
                         }
-                    }
-                }
-            }
-
-            .circle {
-                text-align: center;
-                box-sizing: border-box;
-                padding-top: 32px;
-
-                span {
-                    display: inline-block;
-
-                    &.title {
-                        font-size: 1.5em;
-                        padding-bottom: 7px;
-                    }
-
-                    &.subtitle {
-                        font-size: 0.9em;
-                        line-height: 140%;
                     }
                 }
             }
@@ -815,6 +898,7 @@ img {
 
             .navigation {
                 padding: 0;
+                margin-bottom: 15px;
                 height: 0px; /* js controlled */
                 position: relative;
 

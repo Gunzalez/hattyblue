@@ -2,20 +2,14 @@ Sets up project and starts on homepage                  3.5 hrs  - Friday 28th N
 Completes homepage, web version (-minus favicon)        4.0 hrs  - Saturday 29th November
 Starts responsive on Homepage, footer, header and menu  3.0 hrs  - Sunday 30th December (midnight)
 Completes responsive on homepage                        4.5 hrs  - Monday night, 1st December
-Smooth CSS animation on mobile navigation               2.0hrs   - Tuesday night, 2nd December
+Smooth CSS animation on mobile navigation               2.0hrs   - Tuesday night, 2nd December 
+Refactor, Forms                                         2.0hrs   - Friday morning (5am), 5th December
 
 
 
 TODO
-===============================
-Fix favicon
-
-
-
-
-
-PHP
 ================================
-Left Right page navigation
+Fix delayed mobile menu button position issue
+Left Right page navigation (in php)
 
 

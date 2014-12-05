@@ -11,14 +11,44 @@
 
             <?php include_once('includes/navigation.php'); ?>
 
-            <div class="introduction">
+            <div class="search-form">
+                <h2>Searching for the right permanent role?</h2>
+
                 <div class="copy">
-                    <h2>Searching for the right permanent role?</h2>
                     <p>We are ambitious for you. We look further than your CV and are just as interested in your personality, attitude and your future aspirations as your experience and skill set.</p>
                     <p>Search through our live vacancies opposite to find the prefect role for you. Simply select either your desired salary or the sector you prefer and let us do the rest.</p>
                     <p>When you have found the right role for you please contact us via telephone or email and we'll set up a time to discuss the brief further to make sure it's the best job for you!</p>
                 </div>
-                <div class="image">
+
+                <div class="form-box">
+
+                    <form method="post" id="search-form" class="form" action="">
+                        <div class="row">
+                            <label for="salaries">Salaries</label>
+                            <select id="salaries" name="salaries">
+                                <option value="null" selected="selected">All salaries</option>
+                                <option value="salary8">&pound;8,000</option>
+                                <option value="salary9">&pound;9,000</option>
+                                <option value="salary10">&pound;10,000</option>
+                                <option value="salary11">&pound;11,000</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <span class="circle purple"><span>or</span></span>
+                        </div>
+                        <div class="row">
+                            <label for="sectors">Sectors</label>
+                            <select id="sectors" name="sectors">
+                                <option value="null" selected="selected">All sectors</option>
+                                <option value="sector1">Health Services</option>
+                                <option value="sector2">Finances</option>
+                                <option value="sector3">Agriculture</option>
+                            </select>
+                        </div>
+                        <div class="row submit">
+                            <input type="submit" value="SEARCH">
+                        </div>
+                    </form>
 
                 </div>
             </div>

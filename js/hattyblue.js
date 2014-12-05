@@ -122,4 +122,8 @@
 		hattyblue.init();
 	});
 
+    $(document).load(function(){
+        hattyblue.resize();
+    });
+
 }(jQuery, window));

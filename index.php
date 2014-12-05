@@ -12,8 +12,8 @@
             <?php include_once('includes/navigation.php'); ?>
 
             <div class="introduction">
+                <h2>Welcome to our world</h2>
                 <div class="copy">
-                    <h2>Welcome to our world</h2>
                     <p>Let us tell you a little bit about who we are and what we believe in...</p>
                     <p>Hatty Blue is a business that is small enough to care but big enough to go the extra mile.</p>
                     <p>It's an approach that is fun yet professional, where the often overlooked traditions of personal service are valued above all.</p>
