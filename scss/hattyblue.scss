@@ -3,13 +3,13 @@
 
 // fonts
 $hattyFont1: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
-$hattyFont2: Arial;
 $hattyFont3: 'blenda_scriptregular';
 
 // colours
 $color1: #ec008c;
 $color2: #4d2977;
 $color3: #9babaf;
+$color4: #444444;
 
 // furniture colours
 $borderColor: #e5e5e5;
@@ -17,12 +17,12 @@ $borderColor: #e5e5e5;
 body {
     margin: 0;
     padding: 0;
-    background: #9babaf;
-    color: #444444;
-    font-family: 'blenda_scriptregular';
-    font-family: $hattyFont2;
+    background: $color3;
+    color: $color4;
+    font-family: $hattyFont1;
     font-size: small;
     -webkit-text-size-adjust: none;
+    position: relative;
 }
 
 // resets
@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1, h2, h3, h4, h5, h6 {
     color: #000000;
+    font-weight: normal;
 }
 
 img {
@@ -50,6 +51,18 @@ img {
 .desktop {
     .telephone {
         cursor: text;
+        color: $color4;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .body {
+        .body-content {
+            .telephone {
+                color: $color4;
+            }
+        }
     }
 }
 
@@ -58,36 +71,151 @@ img {
     display: none;
 }
 
+#overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding-top: 200px;
+
+    .job-specs {
+        width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        box-sizing: border-box;
+        text-align: left;
+        position: relative;
+        @include dropshadow();
+
+        .job-summary {
+            width: 340px;
+        }
+
+        .close-button {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+
+            &.circle {
+                width: 32px;
+                height: 32px;
+                color: #ffffff;
+                font-size: 1.4em;
+                padding-top: 3px;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.job-specs {
+    a {
+        color: $color1;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .job-summary {
+        float: left;
+        width: 400px;
+
+        h3 {
+            padding-bottom: 5px;
+        }
+
+        p {
+            padding-bottom: 15px;
+        }
+
+        ul {
+            padding: 0 0 10px 15px;
+            margin: 0;
+
+            li {
+                padding-bottom: 4px;
+            }
+        }
+    }
+
+    .job-meta {
+        float: right;
+        width: 170px;
+        text-align: right;
+
+        h3 {
+            padding-bottom: 2px;
+        }
+
+        .share {
+
+            h4 {
+                padding-bottom: 2px;
+            }
+
+            border-top: 1px solid $borderColor;
+            padding-top: 10px;
+        }
+    }
+}
+
+.circle {
+    @include border-radius(50%);
+    text-align: center;
+    box-sizing: border-box;
+
+    span {
+        display: inline-block;
+    }
+}
+.pink {
+    background: $color1;
+    color: #ffffff;
+}
+
+.purple {
+    background: $color2;
+    color: #ffffff;
+}
+
+.grey {
+    background: $color3;
+    color: #ffffff;
+}
+
 .page {
     width: 768px;
     margin: 0 auto;
     background: #ffffff;
 
+
     /* general to page */
-    .circle {
-        @include border-radius(50%);
-        text-align: center;
-        box-sizing: border-box;
-
-        span {
-            display: inline-block;
-        }
+    .job-title,
+    .job-location {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        color: #000000;
     }
 
-    .pink {
-        background: $color1;
-        color: #ffffff;
+    .highlight {
+        color: $color1;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $borderColor;
     }
 
-    .purple {
-        background: $color2;
-        color: #ffffff;
-    }
 
-    .grey {
-        background: $color3;
-        color: #ffffff;
-    }
+
+
+    ///////////////////////////////
 
     .header {
         padding: 40px 0 20px 0;
@@ -111,7 +239,6 @@ img {
 
         .subtitle {
             text-align: center;
-            font-family: $hattyFont1;
 
             p {
                 display: inline-block;
@@ -183,7 +310,6 @@ img {
                         padding: 0 6px;
                         font-size: 0.95em;
                         text-transform: uppercase;
-                        font-family: $hattyFont1;
                     }
 
                 }
@@ -239,6 +365,25 @@ img {
 
             input {
                 -webkit-appearance: none;
+                font-family: $hattyFont1;
+                @include border-radius(6px);
+                cursor: pointer;
+                padding: 8px 10px;
+                font-size: 1.2em;
+                border: none;
+                outline: none;
+            }
+
+            select {
+                -webkit-appearance: none;
+                font-family: $hattyFont1;
+                @include border-radius(6px);
+                cursor: pointer;
+                padding: 6px 40px 6px  10px;
+                font-size: 1.2em;
+                border: none;
+                outline: none;
+                background: url("../images/bg-select.png") right 4px no-repeat #fff;
             }
 
             .circle {
@@ -265,12 +410,6 @@ img {
 
                 select {
                     width: 100%;
-                    font-family: $hattyFont1;
-                    padding: 5px;
-                    font-size: 1.2em;
-                    border: none;
-                    @include border-radius(6px);
-                    cursor: pointer;
                 }
 
                 &.submit {
@@ -281,7 +420,7 @@ img {
                         border: none;
                         @include border-radius(6px);
                         font-family: $hattyFont1;
-                        padding: 5px 25px;
+                        padding: 8px 25px;
                         font-size: 1.1em;
                         color: #ffffff;
                         background-color: $color2;
@@ -398,13 +537,11 @@ img {
                 &.title {
                     font-size: 1.5em;
                     padding-bottom: 7px;
-                    font-family: $hattyFont1;
                 }
 
                 &.subtitle {
                     font-size: 0.9em;
                     line-height: 140%;
-                    font-family: $hattyFont1;
                 }
             }
         }
@@ -431,17 +568,8 @@ img {
                         display: block;
                         padding: 0 7px 2px 7px;
 
-                        &.job-title,
-                        &.job-location {
-                            font-family: $hattyFont1;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            color: #000000;
-                        }
-
                         &.job-details {
-                            font-size: 0.85em;
+                            font-size: 0.9em;
                             padding-bottom: 5px;
                             line-height: 120%;
                         }
@@ -470,11 +598,75 @@ img {
                             padding: 0 7px 5px 0;
 
                             &.subtitle {
-                                font-size: 0.85em;
+                                font-size: 0.9em;
                                 line-height: 120%;
                             }
                         }
 
+                    }
+                }
+            }
+        }
+
+        .body-content {
+            width: 610px;
+            margin: 0 auto;
+
+            .copy {
+                float: left;
+                width: 370px;
+            }
+
+            .image {
+                float: right;
+                width: 200px;
+
+                .photo-frame {
+                    text-align: right;
+
+                    img {
+                        padding: 20px;
+                        background-color: $color4;
+
+                    }
+                }
+            }
+
+            a {
+                color: $color1;
+                text-decoration: none;
+            }
+
+            .list {
+
+                ul {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        padding-bottom: 12px;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid $borderColor;
+
+                        span {
+                            display: block;
+                            padding-bottom: 3px;
+
+                            &.job-title {
+                                font-size: 1.3em;
+                            }
+
+                            &.job-location,
+                            &.job-salary {
+                                font-size: 1.1em;
+                            }
+
+                            &.job-details {
+                                font-size: 0.9em;
+                                line-height: 130%;
+                            }
+                        }
                     }
                 }
             }
@@ -509,10 +701,9 @@ img {
                     font-size: 0.8em;
                     padding: 0 0 5px 0;
                     line-height: 140%;
-                    font-family: $hattyFont2;
 
                     &.contact {
-                        font-size: 0.7em;
+                        font-size: 0.8em;
 
                         a {
                             text-decoration: none;
@@ -555,7 +746,6 @@ img {
                 p {
                     font-size: 0.8em;
                     font-style: normal;
-                    font-family: $hattyFont2;
                 }
             }
         }
@@ -650,7 +840,7 @@ img {
                         line-height: 140%;
 
                         &.contact {
-                            font-size: 0.7em;
+                            font-size: 0.8em;
 
                             a {
                                 text-decoration: none;
@@ -744,7 +934,17 @@ img {
                     }
                 }
             }
+        }
 
+        .job-summary {
+            float: none;
+            width: auto;
+        }
+
+        .job-meta {
+            float: none;
+            width: auto;
+            text-align: left;
         }
 
         .body {
@@ -840,6 +1040,27 @@ img {
                     }
                 }
             }
+
+
+            .body-content {
+                width: auto;
+                margin: 0 auto;
+
+                .copy {
+                    float: none;
+                    width: 100%;
+                }
+
+                .image {
+                    float: none;
+                    width: 100%;
+
+                    .photo-frame {
+                        padding: 10px 0;
+                        text-align: center;
+                    }
+                }
+            }
         }
 
         .footer {
@@ -874,7 +1095,7 @@ img {
                     float: left;
 
                     h3 {
-                        font-size: 0.8em;
+                        font-size: 1.2em;
                         padding: 0;
                     }
                 }
@@ -1024,10 +1245,15 @@ img {
                     }
                 }
             }
+
+            .search-form {
+                padding: 0 20px;
+            }
         }
 
+
         .body {
-            margin: 30px 20px;
+            margin: 20px;
 
             .big-links {
 

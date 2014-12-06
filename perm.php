@@ -22,7 +22,7 @@
 
                 <div class="form-box">
 
-                    <form method="post" id="search-form" class="form" action="">
+                    <form method="post" id="search-form" class="form" action="perm-2.php">
                         <div class="row">
                             <label for="salaries">Salaries</label>
                             <select id="salaries" name="salaries">
@@ -49,54 +49,35 @@
                             <input type="submit" value="SEARCH">
                         </div>
                     </form>
-
                 </div>
+
+                <div class="cboth"></div>
             </div>
-            <div class="cboth"></div>
         </div><!-- .header -->
 
         <div class="body">
 
+            <div class="body-content">
 
+                <div class="highlight">
+                    <p>Search through our live vacancies to find the perfect role for you. Simply select either your desired salary or sector you prefer and let us do the rest. When you have found the right role for you please contact us via telephone or email and we'll set up a time to discuss the brief further to make sure it's the best job for you!</p>
+                </div>
 
-            <div class="text-links" style="opacity: 0">
-                <ul>
-                    <li class="text-links-title">
-                        <h2>Jobs of the week</h2>
-                        <span class="subtitle">Click here to get connect with the right full time position for you...</span>
-                    </li>
-                    <li>
-                        <span class="job-title" title="PA for CEO">PA for CEO</span>
-                        <span class="job-location" title="Wales">Wales</span>
-                        <span class="job-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Brazil nec gam.</span>
-                        <a href="#" class="read-more">Read more...</a>
-                    </li>
-                    <li>
-                        <span class="job-title" title="Executive. Assistant">Executive. Assistant</span>
-                        <span class="job-location" title="Jamaica">Jamaica</span>
-                        <span class="job-details">Lorem ipsum dolor sit amet, conor sit amet, consecte isse ctetur adi piscing elit. Integer odio nec.</span>
-                        <a href="#" class="read-more">Read more...</a>
-                    </li>
-                    <li>
-                        <span class="job-title" title="Football Coach">Football Coach</span>
-                        <span class="job-location" title="London">London</span>
-                        <span class="job-details">Stl ipsme sport direct lor sit aipisor sit amet. Integer nec odio consecte tur adipiscing elit.</span>
-                        <a href="#" class="read-more">Read more...</a>
-                    </li>
-                    <li>
-                        <span class="job-title" title="TV Presenter">TV Presenter</span>
-                        <span class="job-location" title="Sydney">Sydney</span>
-                        <span class="job-details">Integer nec odio. Lorem ipsum dolor sit aet, Konsec moo moo moo welback scores, consectetur adipiscing elit.</span>
-                        <a href="#" class="read-more">Read more...</a>
-                    </li>
-                    <li>
-                        <span class="job-title" title="Corporate Litigator">Corporate Litigator</span>
-                        <span class="job-location" title="San Fransisco, USA">San Fransisco, USA</span>
-                        <span class="job-details">Lorem ipsum dolor sit amet, con sectetteger nec our adipi scteger nec oing elit. Integer nec odio.</span>
-                        <a href="#" class="read-more">Read more...</a>
-                    </li>
-                </ul>
-                <div class="cleft"></div>
+                <div class="image">
+                    <div class="photo-frame">
+                        <img src="images/gallery/gallery-sample-long.png" width="165" height="245" alt="Aku:The shape shifting prince of evil" />
+                    </div>
+                </div>
+
+                <div class="copy">
+                    <p>As a one of our candidates you can expect to be listened to. Together we will decide what your work goals are and help you look at what you will need to do to achieve them.</p>
+                    <p>We will offer sound advice on your CV and work with you to develop the confidence to build on your strengths and work on any weaknesses.</p>
+                    <p>We will then thoroughly brief you prior to your interviews, feedback to you in an honest, constructive way and guide you through to offer stage and beyond.</p>
+                    <p>We operate a <a href="#">'Refer A Friend'</a> scheme. We love meeting your friends! To thank you for referring someone who finds a permanent job through us, we will give you a <strong>&pound;50.00 Selfridges voucher</strong>.</p>
+                    <p>To enquire about our current permanent vacancies please call us on <a href="tel:+02072401813" class="telephone"><span>0207</span>&nbsp;<span>240</span>&nbsp;<span>1813</span></a>.</p>
+                </div>
+
+                <div class="cboth"></div>
             </div>
         </div><!-- .body -->
 

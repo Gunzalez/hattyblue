@@ -4,7 +4,7 @@
                             <div class="footer-text-left">
                                 <h3>Talk to us!</h3>
                                 <p>You can email if you prefer but we really enjoy talking to you...</p>
-                                <p class="contact">T: <a href="tel:+44(0)2072401813" class="telephone">+44(0)20 7240 1813</a> <br />E: <a href="mailto:hello@hattyblue.co.uk">hello@hattyblue.co.uk</a></p>
+                                <p class="contact">T: <a href="tel:+02072401813" class="telephone"><span>+44(0)20</span>&nbsp;<span>7240</span>&nbsp;<span>1813</span></a> <br />E: <a href="mailto:hello@hattyblue.co.uk">hello@hattyblue.co.uk</a></p>
                                     <span class="social mobile-only">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
                                         <a href="#"><i class="fa fa-twitter"></i></a>

@@ -19,7 +19,7 @@
                             <li><a href="resources.php">Resources</a></li>
                             <li class="last-link"><a href="#">Contact</a></li>
                             <li class="no-link">
-                                <a href="+44(0)2072401813" class="telephone"><span>+44(0)20</span>&nbsp;<span>7240</span>&nbsp;<span>1813</span></a>
+                                <a href="tel:+02072401813" class="telephone"><span>+44(0)207</span>&nbsp;<span>240</span>&nbsp;<span>1813</span></a>
                                     <span class="social">
                                         <a href="+44(0)2072401813" class="telephone"><i class="fa fa-phone"></i></a>
                                         <a href="#"><i class="fa fa-facebook"></i></a>

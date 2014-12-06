@@ -68,7 +68,7 @@
                         <a href="#" class="read-more">Read more...</a>
                     </li>
                     <li>
-                        <span class="job-title" title="Executive. Assistant">Executive. Assistant</span>
+                        <span class="job-title" title="Executive. Assistant">Executive Assistant</span>
                         <span class="job-location" title="Jamaica">Jamaica</span>
                         <span class="job-details">Lorem ipsum dolor sit amet, conor sit amet, consecte isse ctetur adi piscing elit. Integer odio nec.</span>
                         <a href="#" class="read-more">Read more...</a>
