@@ -66,35 +66,35 @@
                             <span class="job-location" title="Wales">Wales</span>
                             <span class="job-salary" title="&pound;9,000">&pound;9,000</span>
                             <span class="job-details">Lorem ipsectetur adipiscinectetur adipisectetur adipiscing elit. Braseccing eli dream leave take him sectetur adipiscing elig eectetur adipiscing elit. Braseclectetur adipiscing elit. Brasecit. Brasum dolosectetur adipiscing elit. Brasectetur adipiscing elit. Brar sit amet, consectetur adipiscing elit. Brazil nec gam.</span>
-                            <a href="perm-3.php?jobId=0" class="read-more light-box">Read more...</a>
+                            <a href="perm-detail.php?jobId=0" class="read-more light-box">Read more...</a>
                         </li>
                         <li>
                             <span class="job-title" title="Executive. Assistant">Executive Assistant</span>
                             <span class="job-location" title="Jamaica">Jamaica</span>
                             <span class="job-salary" title="&pound;11,000">&pound;11,000</span>
                             <span class="job-details">Lorem ipsum dolor sit amet, conor sit amet, cons the king demands your presence, and there he comes, here she xcomes to wreck the day, looks like we're not getting paid , I think I have been lied to , do not presume to judge ecte isse ctetur adi piscing elit. Integer odio nec.</span>
-                            <a href="perm-3.php?jobId=1" class="read-more light-box">Read more...</a>
+                            <a href="perm-detail.php?jobId=1" class="read-more light-box">Read more...</a>
                         </li>
                         <li>
                             <span class="job-title" title="Football Coach">Football Coach</span>
                             <span class="job-location" title="London">London</span>
                             <span class="job-salary" title="&pound;14,000">&pound;14,000</span>
                             <span class="job-details">Stl ipsort direct lor sit aipme sport dirort direct lor sit aipect lor sit aiort direct lor sit aippisor sit amet. Integer nec odio consecte tur adipiscing elit.</span>
-                            <a href="perm-3.php?jobId=2" class="read-more light-box">Read more...</a>
+                            <a href="perm-detail.php?jobId=2" class="read-more light-box">Read more...</a>
                         </li>
                         <li>
                             <span class="job-title" title="TV Presenter">TV Presenter</span>
                             <span class="job-location" title="Sydney">Sydney</span>
                             <span class="job-salary" title="&pound;22,000">&pound;22,000</span>
                             <span class="job-details">Integer nec odor sit aet, Konio. Lorem ipsum dolor sit aet, Konsec moo moo moo welback scores, consectetur adipiscing elit.</span>
-                            <a href="perm-3.php?jobId=3" class="read-more light-box">Read more...</a>
+                            <a href="perm-detail.php?jobId=3" class="read-more light-box">Read more...</a>
                         </li>
                         <li>
                             <span class="job-title" title="Corporate Litigator">Corporate Litigator</span>
                             <span class="job-location" title="San Fransisco, USA">San Fransisco, USA</span>
                             <span class="job-salary" title="&pound;110,000">&pound;110,000</span>
                             <span class="job-details">Lorem ipsum dolor sit amet, con sectetteger nec our adipi scteger nec oing elit. Integer nec odio.</span>
-                            <a href="perm-3.php?jobId=4" class="read-more light-box">Read more...</a>
+                            <a href="perm-detail.php?jobId=4" class="read-more light-box">Read more...</a>
                         </li>
                     </ul>
                 </div>

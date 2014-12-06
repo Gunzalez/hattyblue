@@ -22,7 +22,7 @@
 
                 <div class="form-box">
 
-                    <form method="post" id="search-form" class="form" action="perm-2.php">
+                    <form method="post" id="search-form" class="form" action="perm-list.php">
                         <div class="row">
                             <label for="salaries">Salaries</label>
                             <select id="salaries" name="salaries">

@@ -11,7 +11,7 @@
 
             <?php include_once('includes/navigation.php'); ?>
 
-            <div class="introduction">
+            <div class="introduction home">
                 <h2>Welcome to our world</h2>
                 <div class="copy">
                     <p>Let us tell you a little bit about who we are and what we believe in...</p>
@@ -25,8 +25,8 @@
                         <img src="images/gallery/gallery-sample.jpg" width="240" height="154" alt="Aku:The shape shifting prince of evil" />
                     </div>
                 </div>
+                <div class="cboth"></div>
             </div>
-            <div class="cboth"></div>
         </div><!-- .header -->
 
         <div class="body">

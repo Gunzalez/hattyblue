@@ -5,11 +5,16 @@ Completes responsive on homepage                                4.5 hrs  - Monda
 Smooth CSS animation on mobile navigation                       2.0 hrs   - Tuesday night, 2nd December
 Refactor, Forms, starts                                         2.0 hrs   - Friday morning (5am), 5th December
 Forms ends, Perm job template + version, light box, ajax        6.0 hrs  - Saturday midnight, or Sunday morning, (3am)
+Resources page start and finish                                 2.0 hrs  - Saturday lunch time,
 
 
 TODO
 ================================
 Fix delayed mobile menu button position issue
+CSS3 borders for picture frames, already tried and failed, sniff.
+
+
+
+Better with PHP
+================================
 Left Right page navigation (in php)
-
-

@@ -170,6 +170,7 @@ img {
     @include border-radius(50%);
     text-align: center;
     box-sizing: border-box;
+    display: block;
 
     span {
         display: inline-block;
@@ -461,6 +462,13 @@ img {
                     }
                 }
             }
+
+            &.resources {
+
+                .copy {
+                    width: 320px;
+                }
+            }
         }
 
         .search-form {
@@ -475,6 +483,29 @@ img {
             .form-box {
                 float: right;
                 width: 200px;
+            }
+        }
+
+        .big-link {
+            float: right;
+            width: 250px;
+            text-align: right;
+
+            .circle {
+                margin-top: -35px;
+                width: 240px;
+                height: 240px;
+                display: inline-block;
+                padding-top: 40px;
+
+                .title {
+                    font-size: 2.2em;
+                    padding-bottom: 10px;
+                }
+
+                .subtitle {
+                    font-size: 1.2em;
+                }
             }
         }
     }
@@ -522,6 +553,38 @@ img {
                     a {
                         display: block;
                         text-align: center;
+                    }
+                }
+            }
+        }
+
+        &.resources {
+
+            .big-links {
+
+                ul {
+                    border: none;
+
+                    li {
+                        &.middle-link {
+                            border: none;
+                        }
+
+                        &.bottom {
+                            width: 50%;
+
+                            &.bottom-left {
+                                .circle {
+                                    margin-right: -26%;
+                                }
+                            }
+
+                            &.bottom-right {
+                                .circle {
+                                    margin-left: -26%;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -912,6 +975,13 @@ img {
                         margin: 0 auto;
                     }
                 }
+
+                &.resources {
+
+                    .copy {
+                        width: auto;
+                    }
+                }
             }
 
             .search-form {
@@ -932,6 +1002,16 @@ img {
                         margin: 0 auto;
                         padding-top: 15px;
                     }
+                }
+            }
+
+            .big-link {
+                float: none;
+                width: auto;
+                text-align: center;
+
+                .circle {
+                    margin-top: 0;
                 }
             }
         }
@@ -989,6 +1069,54 @@ img {
                         a {
                             display: block;
                             text-align: center;
+                        }
+                    }
+                }
+            }
+
+            &.resources {
+
+                .big-links {
+
+                    ul {
+                        float: left;
+
+                        li {
+                            float: left;
+                            width: 100%;
+                            text-align: left;
+
+                            &.big-link-5 {
+                                 a {
+                                     float: left;
+                                 }
+                            }
+
+                            a {
+                                margin-top: -35px;
+                            }
+
+                            &.big-link-1 {
+                                 a {
+                                     margin-top: 0;
+                                 }
+                             }
+
+                            &.bottom {
+                                width: 100%;
+
+                                &.bottom-left {
+                                    .circle {
+                                        margin-right: 0;
+                                    }
+                                }
+
+                                &.bottom-right {
+                                    .circle {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -1176,7 +1304,7 @@ img {
             @include border-radius(50%);
             text-align: center;
             box-sizing: border-box;
-            padding-top: 6px;
+            padding-top: 5px;
             font-size: 1.5em;
             display: inline-block;
         }
@@ -1194,7 +1322,7 @@ img {
 
         &.close {
             span {
-                padding-top: 5px;
+                padding-top: 4px;
                 background-color: $color2;
                 color: #ffffff;
                 @include transitions();
@@ -1281,6 +1409,31 @@ img {
                     }
                 }
             }
+
+            &.resources {
+
+                .big-links {
+
+                    ul {
+
+                        li {
+                            .circle {
+                                padding-top: 30px;
+
+                                span {
+
+                                    line-height: 130%;
+
+                                    &.title {
+                                        font-size: 1.2em;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
         }
 
         .footer {
