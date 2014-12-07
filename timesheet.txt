@@ -1,17 +1,21 @@
-Sets up project and starts on homepage                          3.5 hrs  - Friday 28th November
-Completes homepage, web version (-minus favicon)                4.0 hrs  - Saturday 29th November
-Starts responsive on Homepage, footer, header and menu          3.0 hrs  - Sunday 30th December (midnight)
-Completes responsive on homepage                                4.5 hrs  - Monday night, 1st December
+Sets up project and starts on homepage                          3.5 hrs   - Friday 28th November
+Completes homepage, web version (-minus favicon)                4.0 hrs   - Saturday 29th November
+Starts responsive on Homepage, footer, header and menu          3.0 hrs   - Sunday 30th December (midnight)
+Completes responsive on homepage                                4.5 hrs   - Monday night, 1st December
 Smooth CSS animation on mobile navigation                       2.0 hrs   - Tuesday night, 2nd December
 Refactor, Forms, starts                                         2.0 hrs   - Friday morning (5am), 5th December
-Forms ends, Perm job template + version, light box, ajax        6.0 hrs  - Saturday midnight, or Sunday morning, (3am)
-Resources page start and finish                                 2.0 hrs  - Saturday lunch time,
+Forms ends, Perm job template + version, light box, ajax        6.0 hrs   - Saturday midnight, or Sunday morning, (3am)
+Resources page started and finished                             2.0 hrs   - Saturday lunch time.
+Contact page, start and nearly, nearly finished                 4.0 hrs   - Saturday midnight, (2.54am)
 
 
 TODO
 ================================
-Fix delayed mobile menu button position issue
-CSS3 borders for picture frames, already tried and failed, sniff.
+Fix mobile navigation button.
+CSS3 borders for picture frames.
+Fix company address, make it more like design.
+Add on the pointer to map on contact page
+
 
 
 

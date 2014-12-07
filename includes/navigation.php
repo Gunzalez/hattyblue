@@ -15,9 +15,9 @@
                             <li><a href="history.php">History</a></li>
                             <li><a href="clients.php">Clients</a></li>
                             <li><a href="perm.php">Perm</a></li>
-                            <li><a href="temp.php">Temp</a></li>
+                            <li><a href="perm.php">Temp</a></li>
                             <li><a href="resources.php">Resources</a></li>
-                            <li class="last-link"><a href="#">Contact</a></li>
+                            <li class="last-link"><a href="contact.php">Contact</a></li>
                             <li class="no-link">
                                 <a href="tel:+02072401813" class="telephone"><span>+44(0)207</span>&nbsp;<span>240</span>&nbsp;<span>1813</span></a>
                                     <span class="social">

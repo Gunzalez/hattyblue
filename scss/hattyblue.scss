@@ -44,11 +44,17 @@ img {
     border: none;
 }
 
+strong {
+    font-weight: normal;
+    color: #000000;
+}
+
 // utils
 .cleft { clear: left; }
 .cboth { clear: both; }
 
 .desktop {
+
     .telephone {
         cursor: text;
         color: $color4;
@@ -58,11 +64,32 @@ img {
         }
     }
     .body {
+
         .body-content {
+
             .telephone {
                 color: $color4;
             }
         }
+    }
+
+    .header {
+
+        .telephone {
+            cursor: text;
+            color: #ffffff;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.mobile {
+
+    .desktop-only {
+        display: none !important;
     }
 }
 
@@ -114,6 +141,7 @@ img {
 }
 
 .job-specs {
+
     a {
         color: $color1;
         text-decoration: none;
@@ -212,9 +240,6 @@ img {
         margin-bottom: 20px;
         border-bottom: 1px solid $borderColor;
     }
-
-
-
 
     ///////////////////////////////
 
@@ -361,18 +386,47 @@ img {
             padding-bottom: 7px;
         }
 
+        .copy {
+
+            a {
+                color: #ffffff;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                &.telephone {
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
         .form {
             padding-top: 5px;
 
-            input {
+            input,
+            textarea {
                 -webkit-appearance: none;
                 font-family: $hattyFont1;
                 @include border-radius(6px);
-                cursor: pointer;
-                padding: 8px 10px;
-                font-size: 1.2em;
+                padding: 7px 10px;
+                font-size: 1.1em;
                 border: none;
                 outline: none;
+                resize: none;
+                box-sizing: border-box;
+
+                &.text-input {
+                    width: 100%;
+                }
+            }
+
+            textarea {
+                height: 70px;
             }
 
             select {
@@ -416,6 +470,7 @@ img {
                 &.submit {
                     text-align: right;
                     padding-top: 10px;
+                    padding-bottom: 0;
 
                     input {
                         border: none;
@@ -471,7 +526,8 @@ img {
             }
         }
 
-        .search-form {
+        .search-form,
+        .contact-form {
             width: 610px;
             margin: 0 auto;
 
@@ -483,6 +539,76 @@ img {
             .form-box {
                 float: right;
                 width: 200px;
+            }
+
+            span {
+
+                &.error {
+                    text-align: left;
+                    display: none;
+                }
+            }
+
+            .row {
+
+                &.error {
+
+                    span {
+
+                        &.error {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+
+            .row {
+
+                &.submit {
+                    padding: 0;
+                }
+            }
+
+            .cv-upload {
+                width: 105px;
+                float: right;
+            }
+
+            .file-upload {
+                position: relative;
+                overflow: hidden;
+                float: left;
+
+                .fake-upload-button {
+                    border: none;
+                    @include border-radius(6px);
+                    font-family: $hattyFont1;
+                    padding: 7px 12px;
+                    font-size: 1.1em;
+                    color: #000000;
+                    background-color: $color3;
+                    cursor: pointer;
+                    display: inline-block;
+                    float: left;
+                }
+
+                input {
+
+                    &.upload {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 20px;
+                        cursor: pointer;
+                        opacity: 0;
+                        filter: alpha(opacity=0);
+                    }
+                }
             }
         }
 
@@ -731,6 +857,41 @@ img {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .map-content {
+            width: 610px;
+            margin: 0 auto;
+
+            .address {
+                float: left;
+                width: 130px;
+
+                .circle {
+                    width: 128px;
+                    height: 128px;
+                    padding-top: 25px;
+
+                    span {
+                        &.title {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+
+            .map-box {
+
+                padding: 12px;
+                float: right;
+                @include dropshadow();
+
+                #map {
+                    width: 425px;
+                    height: 290px;
+                    background-color: #e8e8e8;
                 }
             }
         }
@@ -984,7 +1145,8 @@ img {
                 }
             }
 
-            .search-form {
+            .search-form,
+            .contact-form {
                 width: auto;
                 margin: 0 auto;
                 padding: 0 30px;
@@ -1002,6 +1164,14 @@ img {
                         margin: 0 auto;
                         padding-top: 15px;
                     }
+                }
+            }
+
+            .contact-form {
+                .cv-upload {
+                    width: 172px;
+                    float: left;
+                    margin-left: 12px;
                 }
             }
 
@@ -1186,6 +1356,43 @@ img {
                     .photo-frame {
                         padding: 10px 0;
                         text-align: center;
+                    }
+                }
+            }
+
+            .map-content {
+                width: auto;
+                margin: 0 auto;
+
+                .address {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    
+                    p {
+                        float: left;
+                    }
+                    
+                    .circle {
+                        float: right;
+                        margin-top: -25px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .map-box {
+
+                    padding: 12px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    float: right;
+                    @include dropshadow();
+                    margin-bottom: 10px;
+
+                    #map {
+                        width: 100%;
+                        height: 290px;
+                        background-color: #e8e8e8;
                     }
                 }
             }
@@ -1374,7 +1581,8 @@ img {
                 }
             }
 
-            .search-form {
+            .search-form,
+            .contact-form {
                 padding: 0 20px;
             }
         }
@@ -1386,8 +1594,8 @@ img {
             .big-links {
 
                 .circle {
-                    width: 128px;
-                    height: 128px;
+                    width: 130px;
+                    height: 130px;
 
                     span {
 
@@ -1418,6 +1626,8 @@ img {
 
                         li {
                             .circle {
+                                width: 140px;
+                                height: 140px;
                                 padding-top: 30px;
 
                                 span {
@@ -1425,7 +1635,7 @@ img {
                                     line-height: 130%;
 
                                     &.title {
-                                        font-size: 1.2em;
+                                        font-size: 1.4em;
                                     }
                                 }
                             }

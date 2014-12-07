@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Hatty Blue</title>
+    <title>Hatty Blue - Resources</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body>
@@ -36,7 +36,7 @@
             <div class="big-links">
                 <ul>
                     <li class="left-link big-link-1">
-                        <a href="perm.php" class="circle pink">
+                        <a href="#" class="circle pink">
                             <span class="title">Getting the<br />most of of<br />your CV</span>
                             <span class="subtitle">Click here to download</span>
                         </a>
@@ -48,13 +48,13 @@
                         </a>
                     </li>
                     <li class="right-link big-link-3">
-                        <a href="temp.php" class="circle purple">
+                        <a href="#" class="circle purple">
                             <span class="title">Top tips to<br />help you with<br />your interview</span>
                             <span class="subtitle">Click here to download</span>
                         </a>
                     </li>
                     <li class="middle-link bottom bottom-left big-link-4">
-                        <a href="temp.php" class="circle pink">
+                        <a href="#" class="circle pink">
                             <span class="title">Timesheets<br />for our Temp<br />placements</span>
                             <span class="subtitle">Click here to download</span>
                         </a>

@@ -8,6 +8,8 @@ h1, h2, h3, h4, h5, h6 { color: #000000; font-weight: normal; }
 
 img { border: none; }
 
+strong { font-weight: normal; color: #000000; }
+
 .cleft { clear: left; }
 
 .cboth { clear: both; }
@@ -15,6 +17,10 @@ img { border: none; }
 .desktop .telephone { cursor: text; color: #444444; }
 .desktop .telephone:hover { text-decoration: none; }
 .desktop .body .body-content .telephone { color: #444444; }
+.desktop .header .telephone { cursor: text; color: #ffffff; }
+.desktop .header .telephone:hover { text-decoration: none; }
+
+.mobile .desktop-only { display: none !important; }
 
 #mobile-nav-button, .mobile-only { display: none; }
 
@@ -69,15 +75,20 @@ img { border: none; }
 .page .header .page-navigation.page-right i { margin-right: -7px; }
 .page .header h2 { padding: 0 0 15px 0; font-size: 2.0em; font-weight: normal; color: #ffffff; }
 .page .header p { padding-bottom: 7px; }
+.page .header .copy a { color: #ffffff; text-decoration: none; }
+.page .header .copy a:hover { text-decoration: underline; }
+.page .header .copy a.telephone:hover { text-decoration: none; }
 .page .header .form { padding-top: 5px; }
-.page .header .form input { -webkit-appearance: none; font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; cursor: pointer; padding: 8px 10px; font-size: 1.2em; border: none; outline: none; }
+.page .header .form input, .page .header .form textarea { -webkit-appearance: none; font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; padding: 7px 10px; font-size: 1.1em; border: none; outline: none; resize: none; box-sizing: border-box; }
+.page .header .form input.text-input, .page .header .form textarea.text-input { width: 100%; }
+.page .header .form textarea { height: 70px; }
 .page .header .form select { -webkit-appearance: none; font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; cursor: pointer; padding: 6px 40px 6px  10px; font-size: 1.2em; border: none; outline: none; background: url("../images/bg-select.png") right 4px no-repeat white; }
 .page .header .form .circle { width: 31px; height: 31px; display: inline-block; }
 .page .header .form .circle span { padding: 8px 0; text-transform: uppercase; font-size: 0.9em; text-align: center; }
 .page .header .form .row { display: block; padding-bottom: 10px; text-align: center; }
 .page .header .form .row label { display: none; }
 .page .header .form .row select { width: 100%; }
-.page .header .form .row.submit { text-align: right; padding-top: 10px; }
+.page .header .form .row.submit { text-align: right; padding-top: 10px; padding-bottom: 0; }
 .page .header .form .row.submit input { border: none; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; padding: 8px 25px; font-size: 1.1em; color: #ffffff; background-color: #4d2977; cursor: pointer; }
 .page .header .introduction { width: 610px; margin: 0 auto; }
 .page .header .introduction .copy { float: left; width: 250px; padding-bottom: 15px; }
@@ -85,9 +96,16 @@ img { border: none; }
 .page .header .introduction .image .photo-frame { width: 326px; height: 228px; background: url("../images/photo-frame.png") 0 0 no-repeat; text-align: center; }
 .page .header .introduction .image .photo-frame img { width: 240px; height: 154px; display: inline-block; padding-left: 3px; padding-top: 32px; }
 .page .header .introduction.resources .copy { width: 320px; }
-.page .header .search-form { width: 610px; margin: 0 auto; }
-.page .header .search-form .copy { float: left; width: 370px; }
-.page .header .search-form .form-box { float: right; width: 200px; }
+.page .header .search-form, .page .header .contact-form { width: 610px; margin: 0 auto; }
+.page .header .search-form .copy, .page .header .contact-form .copy { float: left; width: 370px; }
+.page .header .search-form .form-box, .page .header .contact-form .form-box { float: right; width: 200px; }
+.page .header .search-form span.error, .page .header .contact-form span.error { text-align: left; display: none; }
+.page .header .search-form .row.error span.error, .page .header .contact-form .row.error span.error { display: block; }
+.page .header .contact-form .row.submit { padding: 0; }
+.page .header .contact-form .cv-upload { width: 105px; float: right; }
+.page .header .contact-form .file-upload { position: relative; overflow: hidden; float: left; }
+.page .header .contact-form .file-upload .fake-upload-button { border: none; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial; padding: 7px 12px; font-size: 1.1em; color: #000000; background-color: #9babaf; cursor: pointer; display: inline-block; float: left; }
+.page .header .contact-form .file-upload input.upload { position: absolute; top: 0; right: 0; margin: 0; padding: 0; font-size: 20px; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
 .page .header .big-link { float: right; width: 250px; text-align: right; }
 .page .header .big-link .circle { margin-top: -35px; width: 240px; height: 240px; display: inline-block; padding-top: 40px; }
 .page .header .big-link .circle .title { font-size: 2.2em; padding-bottom: 10px; }
@@ -129,6 +147,12 @@ img { border: none; }
 .page .body .body-content .list ul li span.job-title { font-size: 1.3em; }
 .page .body .body-content .list ul li span.job-location, .page .body .body-content .list ul li span.job-salary { font-size: 1.1em; }
 .page .body .body-content .list ul li span.job-details { font-size: 0.9em; line-height: 130%; }
+.page .body .map-content { width: 610px; margin: 0 auto; }
+.page .body .map-content .address { float: left; width: 130px; }
+.page .body .map-content .address .circle { width: 128px; height: 128px; padding-top: 25px; }
+.page .body .map-content .address .circle span.title { font-size: 1.3em; }
+.page .body .map-content .map-box { padding: 12px; float: right; -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); }
+.page .body .map-content .map-box #map { width: 425px; height: 290px; background-color: #e8e8e8; }
 .page .body .read-more { font-family: "blenda_scriptregular"; }
 .page .footer .footer-text { width: 425px; margin: 0 auto; }
 .page .footer .footer-text .footer-text-left { width: 270px; float: left; box-sizing: border-box; background: url("../images/telephone.png") top right no-repeat; padding-right: 125px; padding-bottom: 20px; }
@@ -170,10 +194,11 @@ img { border: none; }
   .page .header .introduction .image { float: none; width: 100%; }
   .page .header .introduction .image .photo-frame { margin: 0 auto; }
   .page .header .introduction.resources .copy { width: auto; }
-  .page .header .search-form { width: auto; margin: 0 auto; padding: 0 30px; }
-  .page .header .search-form .copy { float: none; width: 100%; }
-  .page .header .search-form .form-box { float: none; width: 100%; }
-  .page .header .search-form .form-box .form { margin: 0 auto; padding-top: 15px; }
+  .page .header .search-form, .page .header .contact-form { width: auto; margin: 0 auto; padding: 0 30px; }
+  .page .header .search-form .copy, .page .header .contact-form .copy { float: none; width: 100%; }
+  .page .header .search-form .form-box, .page .header .contact-form .form-box { float: none; width: 100%; }
+  .page .header .search-form .form-box .form, .page .header .contact-form .form-box .form { margin: 0 auto; padding-top: 15px; }
+  .page .header .contact-form .cv-upload { width: 172px; float: left; margin-left: 12px; }
   .page .header .big-link { float: none; width: auto; text-align: center; }
   .page .header .big-link .circle { margin-top: 0; }
   .page .job-summary { float: none; width: auto; }
@@ -207,6 +232,12 @@ img { border: none; }
   .page .body .body-content .copy { float: none; width: 100%; }
   .page .body .body-content .image { float: none; width: 100%; }
   .page .body .body-content .image .photo-frame { padding: 10px 0; text-align: center; }
+  .page .body .map-content { width: auto; margin: 0 auto; }
+  .page .body .map-content .address { float: none; width: 100%; margin-bottom: 10px; }
+  .page .body .map-content .address p { float: left; }
+  .page .body .map-content .address .circle { float: right; margin-top: -25px; margin-bottom: 20px; }
+  .page .body .map-content .map-box { padding: 12px; width: 100%; box-sizing: border-box; float: right; -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); -moz-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75); margin-bottom: 10px; }
+  .page .body .map-content .map-box #map { width: 100%; height: 290px; background-color: #e8e8e8; }
   .page .footer { padding: 0 30px; }
   .page .footer .footer-text { width: auto; }
   .page .footer .logo-box .footer-logos { width: auto; } }
@@ -231,13 +262,13 @@ img { border: none; }
   .page .header .introduction { padding: 0 20px; }
   .page .header .introduction .image .photo-frame { width: 270px; height: 189px; background-size: cover; }
   .page .header .introduction .image .photo-frame img { width: 199px; height: 128px; padding-top: 27px; }
-  .page .header .search-form { padding: 0 20px; }
+  .page .header .search-form, .page .header .contact-form { padding: 0 20px; }
   .page .body { margin: 20px; }
-  .page .body .big-links .circle { width: 128px; height: 128px; }
+  .page .body .big-links .circle { width: 130px; height: 130px; }
   .page .body .big-links .circle span.title { padding-top: 1px; }
   .page .body .big-links .circle span.subtitle { display: none; }
   .page .body .big-links .left-link .title, .page .body .big-links .right-link .title { padding: 0 12px 7px 12px; }
-  .page .body.resources .big-links ul li .circle { padding-top: 30px; }
+  .page .body.resources .big-links ul li .circle { width: 140px; height: 140px; padding-top: 30px; }
   .page .body.resources .big-links ul li .circle span { line-height: 130%; }
-  .page .body.resources .big-links ul li .circle span.title { font-size: 1.2em; }
+  .page .body.resources .big-links ul li .circle span.title { font-size: 1.4em; }
   .page .footer { padding: 0 20px; } }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Hatty Blue - Permanent roles</title>
+    <title>Hatty Blue - Permanent search</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body>

@@ -12,6 +12,27 @@
     hattyblue.utils = {
         swapClass: function($obj, classToRemove, classToAdd){
             $obj.removeClass(classToRemove).addClass(classToAdd);
+        },
+
+        isEmptyField: function($inputField){
+            var returnValue = true;
+            if($.trim($inputField.val()).length > 0 ){
+                returnValue = false;
+            }
+            return returnValue;
+        },
+
+        isValidEmailAddress: function($inputField){
+            var returnValue = true,
+                IsEmail = function(email){
+                    var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    return regex.test(email);
+                };
+
+            if(!IsEmail($.trim($inputField.val()))){
+                returnValue = false;
+            }
+            return returnValue;
         }
     };
 
@@ -59,7 +80,8 @@
                 $(obj).on('click', function(evt){
                     evt.preventDefault();
 
-                    if(hattyblue.properties.windowWidth > 700){        // ajax in the content if device wide
+                    if(hattyblue.properties.windowWidth > 700){
+                    // get content via ajax fo wide devices
 
                         // build overlay
                         var $overlay = $('<div id="overlay" />'),
@@ -73,19 +95,81 @@
                             });
                         });
 
-                        // attach overlay to page
+                        // attach just the job specs to overlay and then to page
                         $detailContainer.load($(obj).attr('href'), function(){
                             $overlay.html($detailContainer.find('.job-specs').append($closeButton));
                             $('body').append($overlay);
                         });
 
                     } else {
+                    // redirect to full page on narrow devices
+
                         location.assign($(obj).attr('href'));
                     }
                 })
             });
         }
+    };
 
+    hattyblue.contactForm = {
+        $html: $('#contact-form'),
+
+        resize: function(){
+
+        },
+
+        init: function(){
+            // upload button
+            var self = this,
+                $cvInput = $('#cv', self.$html),
+                $cvFileDisplay = $('#cv-file-display', self.$html);
+
+            $cvInput.on('change', function(){
+                var value = this.value + '',
+                    valueArray = value.split('\\'),
+                    fileName = valueArray[valueArray.length - 1];
+
+                // display file name to user
+                $cvFileDisplay.val(fileName);
+            });
+
+            // validation
+            self.$html.on('submit', function(){
+
+                var isValid = true,
+                    userName = $('#name', self.$html),
+                    userEmailAddress = $('#email', self.$html);
+
+                $('.row', self.$html).removeClass('error');
+
+                if(hattyblue.utils.isEmptyField(userName)){
+                    userName.parent('.row').addClass('error');
+                    isValid = false;
+                }
+
+                if(!hattyblue.utils.isValidEmailAddress(userEmailAddress)){
+                    userEmailAddress.parent('.row').addClass('error');
+                    isValid = false;
+                }
+
+                if(!isValid){
+                    return false;
+                }
+            });
+
+            // cosmetics
+            var userName = $('#name', self.$html),
+                userEmailAddress = $('#email', self.$html);
+
+            userName.on('keypress', function() {
+                userName.parent('.row').removeClass('error');
+            });
+
+            userEmailAddress.on('keypress', function() {
+                userEmailAddress.parent('.row').removeClass('error');
+            });
+
+        }
     };
 
     hattyblue.mobile = {
@@ -134,6 +218,7 @@
         hattyblue.environment.resize();
         hattyblue.mobile.resize();
         hattyblue.lightbox.resize();
+        hattyblue.contactForm.resize();
         //
         //
         //
@@ -147,6 +232,7 @@
         hattyblue.environment.init();
         hattyblue.mobile.init();
         hattyblue.lightbox.init();
+        hattyblue.contactForm.init();
         //
         //
         //
