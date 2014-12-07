@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Hatty Blue - Permanent search</title>
+    <title>Hatty Blue - Temporary search</title>
     <?php include_once('includes/resources.php'); ?>
 </head>
 <body>
@@ -12,7 +12,7 @@
             <?php include_once('includes/navigation.php'); ?>
 
             <div class="search-form">
-                <h2>Searching for the right permanent role?</h2>
+                <h2>Searching for the right temporary role?</h2>
 
                 <div class="copy">
                     <p>We are ambitious for you. We look further than your CV and are just as interested in your personality, attitude and your future aspirations as your experience and skill set.</p>
@@ -27,10 +27,10 @@
                             <label for="salaries">Salaries</label>
                             <select id="salaries" name="salaries">
                                 <option value="null" selected="selected">All salaries</option>
-                                <option value="salary8">&pound;8,000</option>
-                                <option value="salary9">&pound;9,000</option>
-                                <option value="salary10">&pound;10,000</option>
-                                <option value="salary11">&pound;11,000</option>
+                                <option value="salary25">&pound;25/hr</option>
+                                <option value="salary35">&pound;35/hr</option>
+                                <option value="salary40">&pound;40/hr</option>
+                                <option value="salary45">&pound;45/hr</option>
                             </select>
                         </div>
                         <div class="row">
@@ -40,9 +40,11 @@
                             <label for="sectors">Sectors</label>
                             <select id="sectors" name="sectors">
                                 <option value="null" selected="selected">All sectors</option>
-                                <option value="sector1">Health Services</option>
-                                <option value="sector2">Finances</option>
-                                <option value="sector3">Agriculture</option>
+                                <option value="sector1">Celebrity Hairdressers</option>
+                                <option value="sector2">Design Schools</option>
+                                <option value="sector3">Events</option>
+                                <option value="sector4">Branding &amp; Marketing</option>
+                                <option value="sector5">Advertising</option>
                             </select>
                         </div>
                         <div class="row submit">
@@ -58,10 +60,6 @@
         <div class="body">
 
             <div class="body-content">
-
-                <div class="highlight underlined">
-                    <p>Search through our live vacancies to find the perfect role for you. Simply select either your desired salary or sector you prefer and let us do the rest. When you have found the right role for you please contact us via telephone or email and we'll set up a time to discuss the brief further to make sure it's the best job for you!</p>
-                </div>
 
                 <div class="image">
                     <div class="photo-frame">

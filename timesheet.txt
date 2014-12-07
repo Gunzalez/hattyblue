@@ -7,7 +7,7 @@ Refactor, Forms, starts                                         2.0 hrs   - Frid
 Forms ends, Perm job template + version, light box, ajax        6.0 hrs   - Saturday midnight, or Sunday morning, (3am)
 Resources page started and finished                             2.0 hrs   - Saturday lunch time.
 Contact page, start and nearly, nearly finished                 4.0 hrs   - Saturday midnight, (2.54am)
-
+Clients page, start and nearly, nearly finished again           2.0 hrs   - Sunday afternoon
 
 TODO
 ================================
@@ -15,6 +15,7 @@ Fix mobile navigation button.
 CSS3 borders for picture frames.
 Fix company address, make it more like design.
 Add on the pointer to map on contact page
+See client's sector list list-style issue
 
 
 

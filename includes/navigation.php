@@ -15,7 +15,7 @@
                             <li><a href="history.php">History</a></li>
                             <li><a href="clients.php">Clients</a></li>
                             <li><a href="perm.php">Perm</a></li>
-                            <li><a href="perm.php">Temp</a></li>
+                            <li><a href="temp.php">Temp</a></li>
                             <li><a href="resources.php">Resources</a></li>
                             <li class="last-link"><a href="contact.php">Contact</a></li>
                             <li class="no-link">
