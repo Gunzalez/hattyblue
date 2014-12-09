@@ -1,9 +1,9 @@
 <?php ?>
-                    <h1 id="hattyblue-logo"><a href="index.php"><img src="images/logo.jpg" alt="Hatty Blue"></a></h1>
+                    <h1 id="hattyblue-logo"><a href="index.php">Home</a></h1>
                     <div class="subtitle">
                         <p>Specialists in recruitment of Graduate&nbsp;&amp;&nbsp;Support&nbsp;staff</p>
                     </div>
-                    <div id="mobile-nav-button" class="open">
+                    <div id="mobile-nav-button" class="open show-last">
                         <span>
                             <i class="fa fa-bars"></i>
                             <i class="fa fa-close"></i>

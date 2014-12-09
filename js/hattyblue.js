@@ -45,8 +45,7 @@
         },
 
         resize : function(){
-
-
+            // If you need to resize anything mobile for any reason
         },
 
         init: function(){
@@ -97,8 +96,12 @@
 
                         // attach just the job specs to overlay and then to page
                         $detailContainer.load($(obj).attr('href'), function(){
+
                             $overlay.html($detailContainer.find('.job-specs').append($closeButton));
                             $('body').append($overlay);
+
+                            // scroll to top
+                            $("html, body").animate({ scrollTop: 0 }, 1000);
                         });
 
                     } else {
@@ -115,7 +118,7 @@
         $html: $('#contact-form'),
 
         resize: function(){
-
+            // If you need to resize the form for any reason
         },
 
         init: function(){
@@ -168,6 +171,7 @@
             userEmailAddress.on('keypress', function() {
                 userEmailAddress.parent('.row').removeClass('error');
             });
+            // ----------------------------
 
         }
     };
@@ -188,10 +192,10 @@
         resize: function(){
             var self = this,
                 $logoDiv = $('#hattyblue-logo'),
-                $logoImg = $('img',$logoDiv);
+                $logoAnchor = $('a', $logoDiv);
 
             // repositions mobile nav button
-            self.$button.css('left', $logoImg.position().left + $logoImg.width() - 10);
+            self.$button.css('left', $logoAnchor.position().left + $logoAnchor.width() - 10);
 
             // hide menu
             self.menuAction('close');
@@ -260,7 +264,9 @@
 		hattyblue.init();
 	});
 
-    $(document).load(function(){
+    // After all image have loaded
+    $(window).load(function(){
+        $('.show-last').removeClass('show-last');
         hattyblue.resize();
     });
 

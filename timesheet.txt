@@ -1,3 +1,6 @@
+Detailed Timesheet breakdown
+================================
+
 Sets up project and starts on homepage                          3.5 hrs   - Friday 28th November
 Completes homepage, web version (-minus favicon)                4.0 hrs   - Saturday 29th November
 Starts responsive on Homepage, footer, header and menu          3.0 hrs   - Sunday 30th December (midnight)
@@ -8,18 +11,18 @@ Forms ends, Perm job template + version, light box, ajax        6.0 hrs   - Satu
 Resources page started and finished                             2.0 hrs   - Saturday lunch time.
 Contact page, start and nearly, nearly finished                 4.0 hrs   - Saturday midnight, (2.54am)
 Clients page, start and nearly, nearly finished again           2.0 hrs   - Sunday afternoon
+History page, started and completed                             3.0 hrs   - Monday night (1am)
+
+
+Total = 36 hrs (Wow, not a bad estimation by me, wouldn't you say)
 
 TODO
 ================================
-Fix mobile navigation button.
-CSS3 borders for picture frames.
-Fix company address, make it more like design.
-Add on the pointer to map on contact page
-See client's sector list list-style issue
-
+CSS3 borders for picture frames: = Segun will do this later, no time added.
+Add on the pointer to map on contact page: = Rob says he'll do it, sweet.
 
 
 
 Better with PHP
 ================================
-Left Right page navigation (in php)
+Left Right page navigation (in php): Rob will do this too, sweet!

@@ -65,7 +65,7 @@
 
                 <div class="image">
                     <div class="photo-frame">
-                        <img src="images/gallery/gallery-sample-long.png" width="165" height="245" alt="Aku:The shape shifting prince of evil" />
+                        <img src="images/gallery/gallery-sample-long.jpg" width="165" height="245" alt="Aku:The shape shifting prince of evil" />
                     </div>
                 </div>
 
