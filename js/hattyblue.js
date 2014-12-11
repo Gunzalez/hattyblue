@@ -223,11 +223,6 @@
         hattyblue.mobile.resize();
         hattyblue.lightbox.resize();
         hattyblue.contactForm.resize();
-        //
-        //
-        //
-        //
-
     };
 
 	hattyblue.init = function(){
@@ -237,10 +232,6 @@
         hattyblue.mobile.init();
         hattyblue.lightbox.init();
         hattyblue.contactForm.init();
-        //
-        //
-        //
-        //
 
         // resize triggers
 		$(window).on('resize',function(){
@@ -250,7 +241,6 @@
 
 			if(oldWidth != newWidth){
                 hattyblue.properties.windowWidth = newWidth;
-                console.log(hattyblue.properties.windowWidth);
 				hattyblue.resize();
 			}
 		});

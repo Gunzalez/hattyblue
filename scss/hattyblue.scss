@@ -69,7 +69,7 @@ strong {
 
     .telephone {
         cursor: text;
-        color: $color4;
+        color: $color4 !important;
 
         &:hover {
             text-decoration: none;
@@ -107,7 +107,7 @@ strong {
 
         .telephone {
             cursor: text;
-            color: #ffffff;
+            color: #ffffff !important;
 
             &:hover {
                 text-decoration: none;
@@ -383,7 +383,7 @@ strong {
 
                             a {
                                 display: inline-block;
-                                color: $color1;
+                                color: $color1 !important;
                                 background-color: #ffffff;
                                 width: 16px;
                                 height: 16px;
@@ -693,6 +693,7 @@ strong {
                             .copy {
                                 width: 145px;
                                 font-size: 0.9em;
+                                padding-bottom: 10px;
                             }
 
                             .image {
@@ -1215,6 +1216,10 @@ strong {
                         a {
                             text-decoration: none;
                             color: #444;
+
+                            &.telephone {
+                                color: $color1;
+                            }
                         }
                     }
                 }
