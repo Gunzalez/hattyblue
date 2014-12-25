@@ -572,7 +572,12 @@ strong {
                 .image {
 
                     .photo-frame {
-                        padding: 20px;
+                        width: 303px;
+                        height: 218px;
+                        background: url("../images/frame-home.jpg") 0 0 no-repeat;
+                        text-align: center;
+                        padding-top: 31px;
+                        box-sizing: border-box;
                     }
                 }
             }
@@ -634,7 +639,12 @@ strong {
                     padding-bottom: 20px;
 
                     .photo-frame {
-                        padding: 15px;
+                        width: 133px;
+                        height: 177px;
+                        background: url("../images/frame-history.jpg") 0 0 no-repeat;
+                        text-align: center;
+                        padding-top: 16px;
+                        box-sizing: border-box;
                     }
                 }
 
@@ -691,7 +701,7 @@ strong {
                         .feature-box {
 
                             .copy {
-                                width: 145px;
+                                width: 135px;
                                 font-size: 0.9em;
                                 padding-bottom: 10px;
                             }
@@ -1026,15 +1036,19 @@ strong {
 
             .copy {
                 float: left;
-                width: 370px;
+                width: 350px;
             }
 
             .image {
                 float: right;
 
                 .photo-frame {
-                    text-align: right;
-                    padding: 20px;
+                    width: 236px;
+                    height: 310px;
+                    background: url("../images/frame-jobs.jpg") 0 0 no-repeat;
+                    text-align: center;
+                    padding-top: 31px;
+                    box-sizing: border-box;
                 }
             }
 
@@ -1122,7 +1136,12 @@ strong {
                 padding-bottom: 20px;
 
                 .photo-frame {
-                    padding: 15px;
+                    width: 133px;
+                    height: 177px;
+                    background: url("../images/frame-history.jpg") 0 0 no-repeat;
+                    text-align: center;
+                    padding-top: 16px;
+                    box-sizing: border-box;
                 }
             }
 
@@ -1170,7 +1189,7 @@ strong {
             .feature-box {
 
                 .copy {
-                    width: 145px;
+                    width: 135px;
                     font-size: 0.9em;
                 }
 
@@ -1753,11 +1772,6 @@ strong {
                     width: 100%;
                     text-align: center;
                     padding-bottom: 20px;
-
-                    .photo-frame {
-                        padding: 15px;
-                        text-align: center;
-                    }
                 }
             }
 
@@ -1817,7 +1831,7 @@ strong {
 
                         .copy {
                             float: none;
-                            padding-left: 145px;
+                            padding-left: 155px;
                             box-sizing: border-box;
                             width: 100%;
                         }
@@ -2042,7 +2056,10 @@ strong {
                         padding-bottom: 5px;
 
                         .photo-frame {
-                            padding: 15px;
+                            width: 280px;
+                            height: 201px;
+                            background-size: cover;
+                            padding-top: 22px;
                         }
                     }
                 }

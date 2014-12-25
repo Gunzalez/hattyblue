@@ -479,7 +479,12 @@ strong {
   float: right;
 }
 .page .header .introduction.home .image .photo-frame {
-  padding: 20px;
+  width: 303px;
+  height: 218px;
+  background: url("../images/frame-home.jpg") 0 0 no-repeat;
+  text-align: center;
+  padding-top: 31px;
+  box-sizing: border-box;
 }
 .page .header .introduction.resources .copy {
   width: 320px;
@@ -523,7 +528,12 @@ strong {
   padding-bottom: 20px;
 }
 .page .header .introduction.history .image .photo-frame {
-  padding: 15px;
+  width: 133px;
+  height: 177px;
+  background: url("../images/frame-history.jpg") 0 0 no-repeat;
+  text-align: center;
+  padding-top: 16px;
+  box-sizing: border-box;
 }
 .page .header .introduction.history .copy {
   float: none;
@@ -567,7 +577,7 @@ strong {
   float: left;
 }
 .page .header .introduction.history .copy .feature .feature-box .copy {
-  width: 145px;
+  width: 135px;
   font-size: 0.9em;
   padding-bottom: 10px;
 }
@@ -804,14 +814,18 @@ strong {
 }
 .page .body .body-content .copy {
   float: left;
-  width: 370px;
+  width: 350px;
 }
 .page .body .body-content .image {
   float: right;
 }
 .page .body .body-content .image .photo-frame {
-  text-align: right;
-  padding: 20px;
+  width: 236px;
+  height: 310px;
+  background: url("../images/frame-jobs.jpg") 0 0 no-repeat;
+  text-align: center;
+  padding-top: 31px;
+  box-sizing: border-box;
 }
 .page .body .body-content a {
   color: #ec008c;
@@ -879,7 +893,12 @@ strong {
   padding-bottom: 20px;
 }
 .page .body .feature .image .photo-frame {
-  padding: 15px;
+  width: 133px;
+  height: 177px;
+  background: url("../images/frame-history.jpg") 0 0 no-repeat;
+  text-align: center;
+  padding-top: 16px;
+  box-sizing: border-box;
 }
 .page .body .feature h3 {
   padding-bottom: 5px;
@@ -914,7 +933,7 @@ strong {
   float: left;
 }
 .page .body .feature .feature-box .copy {
-  width: 145px;
+  width: 135px;
   font-size: 0.9em;
 }
 .page .body .feature .feature-box .image {
@@ -1332,10 +1351,6 @@ strong {
     text-align: center;
     padding-bottom: 20px;
   }
-  .page .body .body-content .image .photo-frame {
-    padding: 15px;
-    text-align: center;
-  }
   .page .body .map-content {
     width: auto;
     margin: 0 auto;
@@ -1386,7 +1401,7 @@ strong {
   .page .body .feature .feature-one .feature-box .copy,
   .page .body .feature .feature-two .feature-box .copy {
     float: none;
-    padding-left: 145px;
+    padding-left: 155px;
     box-sizing: border-box;
     width: 100%;
   }
@@ -1557,7 +1572,10 @@ strong {
     padding-bottom: 5px;
   }
   .page .header .introduction.home .image .photo-frame {
-    padding: 15px;
+    width: 280px;
+    height: 201px;
+    background-size: cover;
+    padding-top: 22px;
   }
   .page .header .search-form,
   .page .header .contact-form {
