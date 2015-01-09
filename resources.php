@@ -34,39 +34,42 @@
         <div class="body resources">
 
             <div class="big-links">
-                <ul>
-                    <li class="left-link big-link-1">
-                        <a href="#" class="circle pink">
-                            <span class="title">Getting the<br />most of of<br />your CV</span>
-                            <span class="subtitle">Click here to download</span>
-                        </a>
-                    </li>
-                    <li class="middle-link big-link-2">
-                        <a href="#" class="circle grey">
-                            <span class="title">Hatty Blue<br />guide for Temp<br />placements</span>
-                            <span class="subtitle">Click here to download</span>
-                        </a>
-                    </li>
-                    <li class="right-link big-link-3">
-                        <a href="#" class="circle purple">
-                            <span class="title">Top tips to<br />help you with<br />your interview</span>
-                            <span class="subtitle">Click here to download</span>
-                        </a>
-                    </li>
-                    <li class="middle-link bottom bottom-left big-link-4">
-                        <a href="#" class="circle pink">
-                            <span class="title">Timesheets<br />for our Temp<br />placements</span>
-                            <span class="subtitle">Click here to download</span>
-                        </a>
-                    </li>
-                    <li class="middle-link bottom bottom-right big-link-5">
-                        <a href="#" class="circle grey">
-                            <span class="title">Hatty Blue<br />refer a friend<br />scheme</span>
-                            <span class="subtitle">Click here to download</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="cleft"></div>
+                <a href="#" class="circle pink">
+                    <span class="title">Getting the<br />most of of<br />your CV</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle grey">
+                    <span class="title">Hatty Blue<br />guide for Temp<br />placements</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle purple">
+                    <span class="title">Top tips to<br />help you with<br />your interview</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle pink">
+                    <span class="title">Timesheets<br />for our Temp<br />placements</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle grey">
+                    <span class="title">Hatty Blue<br />refer a friend<br />scheme</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle grey">
+                    <span class="title">Hatty Blue<br />guide for Temp<br />placements</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle purple">
+                    <span class="title">Top tips to<br />help you with<br />your interview</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle pink">
+                    <span class="title">Timesheets<br />for our Temp<br />placements</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
+                <a href="#" class="circle grey">
+                    <span class="title">Hatty Blue<br />refer a friend<br />scheme</span>
+                    <span class="subtitle">Click here to download</span>
+                </a>
             </div>
 
         </div><!-- .body -->

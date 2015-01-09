@@ -17,12 +17,13 @@ $borderColor: #e5e5e5;
 body {
     margin: 0;
     padding: 0;
-    background: $color3;
+    background: url("../images/wallpaper.png") 0 0 $color3;
     color: $color4;
     font-family: $hattyFont1;
     font-size: small;
     -webkit-text-size-adjust: none;
     position: relative;
+    background-attachment: fixed;
 }
 
 // resets
@@ -877,32 +878,11 @@ strong {
 
             .big-links {
 
-                ul {
-                    border: none;
+                text-align: center;
 
-                    li {
-                        &.middle-link {
-                            border: none;
-                        }
-
-                        &.bottom {
-                            width: 50%;
-
-                            &.bottom-left {
-
-                                .circle {
-                                    margin-right: -26%;
-                                }
-                            }
-
-                            &.bottom-right {
-
-                                .circle {
-                                    margin-left: -26%;
-                                }
-                            }
-                        }
-                    }
+                a {
+                    display: inline-block;
+                    margin: 0 15px 15px 15px;
                 }
             }
         }
@@ -1622,54 +1602,6 @@ strong {
                 }
             }
 
-            &.resources {
-
-                .big-links {
-
-                    ul {
-                        float: left;
-
-                        li {
-                            float: left;
-                            width: 100%;
-                            text-align: left;
-
-                            &.big-link-5 {
-                                 a {
-                                     float: left;
-                                 }
-                            }
-
-                            a {
-                                margin-top: -35px;
-                            }
-
-                            &.big-link-1 {
-                                 a {
-                                     margin-top: 0;
-                                 }
-                             }
-
-                            &.bottom {
-                                width: 100%;
-
-                                &.bottom-left {
-                                    .circle {
-                                        margin-right: 0;
-                                    }
-                                }
-
-                                &.bottom-right {
-                                    .circle {
-                                        margin-left: 0;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
             .text-links {
 
                 ul {
@@ -2106,28 +2038,31 @@ strong {
 
                 .big-links {
 
-                    ul {
+                    .circle {
+                        width: 166px;
+                        height: 166px;
+                        padding-top: 40px;
 
-                        li {
-                            .circle {
-                                width: 140px;
-                                height: 140px;
-                                padding-top: 30px;
+                        span {
 
-                                span {
+                            line-height: 130%;
 
-                                    line-height: 130%;
+                            &.title {
+                                font-size: 1.3em;
+                            }
 
-                                    &.title {
-                                        font-size: 1.4em;
-                                    }
-                                }
+                            &.subtitle {
+                                display: block;
                             }
                         }
+
+                        &:hover {
+                            text-decoration: none;
+                        }
                     }
+
                 }
             }
-
         }
 
         .footer {

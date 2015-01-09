@@ -9,12 +9,13 @@
 body {
   margin: 0;
   padding: 0;
-  background: #9babaf;
+  background: url("../images/wallpaper.png") 0 0 #9babaf;
   color: #444444;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
   font-size: small;
   -webkit-text-size-adjust: none;
   position: relative;
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -698,20 +699,12 @@ strong {
   display: block;
   text-align: center;
 }
-.page .body.resources .big-links ul {
-  border: none;
+.page .body.resources .big-links {
+  text-align: center;
 }
-.page .body.resources .big-links ul li.middle-link {
-  border: none;
-}
-.page .body.resources .big-links ul li.bottom {
-  width: 50%;
-}
-.page .body.resources .big-links ul li.bottom.bottom-left .circle {
-  margin-right: -26%;
-}
-.page .body.resources .big-links ul li.bottom.bottom-right .circle {
-  margin-left: -26%;
+.page .body.resources .big-links a {
+  display: inline-block;
+  margin: 0 15px 15px 15px;
 }
 .page .body .circle {
   width: 166px;
@@ -1243,32 +1236,6 @@ strong {
     display: block;
     text-align: center;
   }
-  .page .body.resources .big-links ul {
-    float: left;
-  }
-  .page .body.resources .big-links ul li {
-    float: left;
-    width: 100%;
-    text-align: left;
-  }
-  .page .body.resources .big-links ul li.big-link-5 a {
-    float: left;
-  }
-  .page .body.resources .big-links ul li a {
-    margin-top: -35px;
-  }
-  .page .body.resources .big-links ul li.big-link-1 a {
-    margin-top: 0;
-  }
-  .page .body.resources .big-links ul li.bottom {
-    width: 100%;
-  }
-  .page .body.resources .big-links ul li.bottom.bottom-left .circle {
-    margin-right: 0;
-  }
-  .page .body.resources .big-links ul li.bottom.bottom-right .circle {
-    margin-left: 0;
-  }
   .page .body .text-links ul {
     width: 100%;
     float: none;
@@ -1598,16 +1565,22 @@ strong {
   .page .body .big-links .right-link .title {
     padding: 0 12px 7px 12px;
   }
-  .page .body.resources .big-links ul li .circle {
-    width: 140px;
-    height: 140px;
-    padding-top: 30px;
+  .page .body.resources .big-links .circle {
+    width: 166px;
+    height: 166px;
+    padding-top: 40px;
   }
-  .page .body.resources .big-links ul li .circle span {
+  .page .body.resources .big-links .circle span {
     line-height: 130%;
   }
-  .page .body.resources .big-links ul li .circle span.title {
-    font-size: 1.4em;
+  .page .body.resources .big-links .circle span.title {
+    font-size: 1.3em;
+  }
+  .page .body.resources .big-links .circle span.subtitle {
+    display: block;
+  }
+  .page .body.resources .big-links .circle:hover {
+    text-decoration: none;
   }
   .page .footer {
     padding: 0 20px;
