@@ -2,8 +2,11 @@
 @import "fonts";
 
 // fonts
-$hattyFont1: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Arial;
-$hattyFont3: 'blenda_scriptregular';
+$hattyFont1: "helvetica_thin";
+$hattyFont2: "helveticaneuemedium";
+$hattyFont3: 'helveticaneuelightitalic';
+$hattyFont4: 'blenda_scriptregular';
+
 
 // colours
 $color1: #ec008c;
@@ -400,7 +403,7 @@ strong {
                         color: #ffffff;
                         text-decoration: none;
                         display: block;
-                        padding: 0 6px;
+                        padding: 0 7px;
                         font-size: 0.95em;
                         text-transform: uppercase;
                     }
